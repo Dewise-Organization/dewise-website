@@ -32,6 +32,28 @@ export default function ProjectDetailPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Project Photos - Moved to appear early for immediate visual impact */}
+        {project.photos && (
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold mb-6">Project in Action</h3>
+            <div className="grid gap-6 md:grid-cols-3">
+              {project.photos.map((photo, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                  <ImageWithFallback 
+                    src={photo.src} 
+                    alt={photo.alt} 
+                    fallback="📸"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-700 font-medium">{photo.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* New Section: Project Context and Crisis Impact */}
         {project.context && (
           <div className="mt-12 bg-red-50 p-8 rounded-lg">
@@ -43,7 +65,7 @@ export default function ProjectDetailPage({ params }: Props) {
                 <h4 className="font-semibold text-red-700 mb-3">Key Statistics</h4>
                 <div className="space-y-2">
                   {project.context.numerics.map((numeric, index) => (
-                    <div key={index} className="flex items-center gap-3">
+                    <div key={index} className="flex items-start gap-3">
                       <div className="text-red-500 text-lg">📊</div>
                       <span className="text-gray-700 text-sm">{numeric}</span>
                     </div>
@@ -80,28 +102,6 @@ export default function ProjectDetailPage({ params }: Props) {
                 <h4 className="font-semibold text-emerald-700 mb-3">Scale and Impact</h4>
                 <p className="text-gray-700 text-sm">{project.youthTraining.scale}</p>
               </div>
-            </div>
-          </div>
-        )}
-
-        {/* New Section: Project Photos */}
-        {project.photos && (
-          <div className="mt-12">
-            <h3 className="text-2xl font-semibold mb-6">Project in Action</h3>
-            <div className="grid gap-6 md:grid-cols-3">
-              {project.photos.map((photo, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
-                  <ImageWithFallback 
-                    src={photo.src} 
-                    alt={photo.alt} 
-                    fallback="📸"
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <p className="text-sm text-gray-700 font-medium">{photo.caption}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         )}
