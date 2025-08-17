@@ -16,8 +16,28 @@ export default function AchievementsPage() {
           community development. Our work is transforming lives across Cameroon and gaining global attention.
         </p>
 
-        {/* International Recognition Section */}
+        {/* Recognition & Certificates - Moved to top for immediate visual impact */}
         <div className="mt-12">
+          <h2 className="text-2xl font-semibold mb-6">Recognition & Certificates</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {site.recognition.certificates.map((certificate, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                <ImageWithFallback 
+                  src={certificate.src} 
+                  alt={certificate.alt} 
+                  fallback="🏆"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <p className="text-sm text-gray-700 font-medium">{certificate.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* International Recognition Section */}
+        <div className="mt-16">
           <h2 className="text-2xl font-semibold mb-6">International Recognition</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {site.hero.recognition.highlights.map((highlight, index) => (
@@ -34,38 +54,7 @@ export default function AchievementsPage() {
           </div>
         </div>
 
-        {/* WiseCool Project Recognition */}
-        {wisecoolProject?.recognition && (
-          <div className="mt-16">
-            <h2 className="text-2xl font-semibold mb-6">Project Recognition: WiseCool</h2>
-            <div className="bg-gradient-to-r from-emerald-50 to-sky-50 p-8 rounded-lg">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">MTN PachiPanda Challenge 2024</h3>
-                  <div className="space-y-3">
-                    {wisecoolProject.recognition.achievements.map((achievement, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="text-emerald-500 text-lg">✓</div>
-                        <span className="text-gray-700">{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 p-4 bg-white rounded-lg">
-                    <h4 className="font-semibold text-emerald-700 mb-2">Innovation Impact</h4>
-                    <p className="text-sm text-gray-600">
-                      {wisecoolProject.recognition.innovation}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="text-6xl">🏥</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* New Section: Davis Projects for Peace Award */}
+        {/* Davis Projects for Peace Award */}
         <div className="mt-16">
           <h2 className="text-2xl font-semibold mb-6">Davis Projects for Peace Award</h2>
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg">
@@ -111,33 +100,79 @@ export default function AchievementsPage() {
           </div>
         </div>
 
-        {/* Team Achievements */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-6">Team Excellence</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {site.team.filter(member => member.achievements).map((member) => (
-              <div key={member.name} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 mx-auto bg-sky-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">👤</span>
+        {/* WiseCool Project Recognition */}
+        {wisecoolProject?.recognition && (
+          <div className="mt-16">
+            <h2 className="text-2xl font-semibold mb-6">Project Recognition: WiseCool</h2>
+            <div className="bg-gradient-to-r from-emerald-50 to-sky-50 p-8 rounded-lg">
+              <div className="grid gap-8 md:grid-cols-2">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">MTN PachiPanda Challenge 2024</h3>
+                  <div className="space-y-3">
+                    {wisecoolProject.recognition.achievements.map((achievement, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="text-emerald-500 text-lg">✓</div>
+                        <span className="text-gray-700">{achievement}</span>
+                      </div>
+                    ))}
                   </div>
-                  <h3 className="font-semibold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-sky-600">{member.role}</p>
-                </div>
-                <div className="space-y-2">
-                  {member.achievements?.slice(0, 3).map((achievement, index) => (
-                    <div key={index} className="text-sm text-gray-600">
-                      • {achievement}
-                    </div>
-                  ))}
-                </div>
-                {member.credentials && (
-                  <div className="mt-4 p-3 bg-sky-50 rounded-md">
-                    <p className="text-xs text-sky-700 font-medium">{member.credentials}</p>
+                  <div className="mt-6 p-4 bg-white rounded-lg">
+                    <h4 className="font-semibold text-emerald-700 mb-2">Innovation Impact</h4>
+                    <p className="text-sm text-gray-600">
+                      {wisecoolProject.recognition.innovation}
+                    </p>
                   </div>
-                )}
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="text-6xl">🏥</div>
+                </div>
               </div>
-            ))}
+            </div>
+          </div>
+        )}
+
+        {/* Our Work in Action - Improved positioning and layout */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-semibold mb-6">Our Work in Action</h2>
+          
+          {/* SunSpark Project */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-emerald-700 mb-6">SunSpark Energy Accelerator</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              {site.projectImages.sunspark.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                  <ImageWithFallback 
+                    src={image.src} 
+                    alt={image.alt} 
+                    fallback="🌱"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-700">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Fellowship Program */}
+          <div>
+            <h3 className="text-xl font-semibold text-emerald-700 mb-6">Energy Transition Fellowship 2024</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              {site.projectImages.fellowship.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                  <ImageWithFallback 
+                    src={image.src} 
+                    alt={image.alt} 
+                    fallback="🌟"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-700">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -224,71 +259,6 @@ export default function AchievementsPage() {
             >
               Get Involved
             </a>
-          </div>
-        </div>
-
-        {/* New Section: Recognition Certificates and Photos */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-6">Recognition & Certificates</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {site.recognition.certificates.map((certificate, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
-                <ImageWithFallback 
-                  src={certificate.src} 
-                  alt={certificate.alt} 
-                  fallback="🏆"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <p className="text-sm text-gray-700 font-medium">{certificate.caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* New Section: Project Work in Action */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-6">Our Work in Action</h2>
-          
-          {/* SunSpark Project */}
-          <div className="mb-12">
-            <h3 className="text-xl font-semibold text-emerald-700 mb-6">SunSpark Energy Accelerator</h3>
-            <div className="grid gap-6 md:grid-cols-2">
-              {site.projectImages.sunspark.map((image, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
-                  <ImageWithFallback 
-                    src={image.src} 
-                    alt={image.alt} 
-                    fallback="🌱"
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="p-4">
-                    <p className="text-sm text-gray-700">{image.caption}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Fellowship Program */}
-          <div>
-            <h3 className="text-xl font-semibold text-emerald-700 mb-6">Energy Transition Fellowship</h3>
-            <div className="grid gap-6 md:grid-cols-2">
-              {site.projectImages.fellowship.map((image, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
-                  <ImageWithFallback 
-                    src={image.src} 
-                    alt={image.alt} 
-                    fallback="🌟"
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="p-4">
-                    <p className="text-sm text-gray-700">{image.caption}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
