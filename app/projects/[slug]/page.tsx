@@ -31,6 +31,32 @@ export default function ProjectDetailPage({ params }: Props) {
           </div>
         </div>
 
+        {/* New Section: Project Context and Crisis Impact */}
+        {project.context && (
+          <div className="mt-12 bg-red-50 p-8 rounded-lg">
+            <h3 className="text-xl font-semibold text-red-800 mb-4">{project.context.title}</h3>
+            <p className="text-gray-700 mb-6">{project.context.description}</p>
+            
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h4 className="font-semibold text-red-700 mb-3">Key Statistics</h4>
+                <div className="space-y-2">
+                  {project.context.numerics.map((numeric, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="text-red-500 text-lg">📊</div>
+                      <span className="text-gray-700 text-sm">{numeric}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-red-700 mb-3">Crisis Impact</h4>
+                <p className="text-gray-700 text-sm">{project.context.crisisImpact}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Project Details Grid */}
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {/* Objectives */}

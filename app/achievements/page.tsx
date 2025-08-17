@@ -65,6 +65,52 @@ export default function AchievementsPage() {
           </div>
         )}
 
+        {/* New Section: Davis Projects for Peace Award */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-semibold mb-6">Davis Projects for Peace Award</h2>
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg">
+            <div className="grid gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">WiseBox: Sole Dartmouth Recipient</h3>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start gap-3">
+                    <div className="text-blue-500 text-lg">🏆</div>
+                    <span className="text-gray-700">Selected from 125 U.S.-funded projects nationwide</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-blue-500 text-lg">🌟</div>
+                    <span className="text-gray-700">Sole Dartmouth recipient of prestigious Davis Foundation award</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-blue-500 text-lg">📅</div>
+                    <span className="text-gray-700">Summer 2025 expansion planned for crisis-affected regions</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-blue-500 text-lg">🌍</div>
+                    <span className="text-gray-700">International recognition for innovative community energy solutions</span>
+                  </div>
+                </div>
+                
+                <div className="p-4 bg-white rounded-lg">
+                  <h4 className="font-semibold text-blue-700 mb-2">Project Innovation</h4>
+                  <p className="text-sm text-gray-600">
+                    WiseBox represents a breakthrough in deploying solar-powered mobile learning devices to students in remote, 
+                    rural, and crisis-affected Anglophone regions of Cameroon, directly combating educational disruption through clean energy access.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-6xl mb-4">⚡</div>
+                  <div className="text-2xl font-bold text-blue-600">Davis Projects for Peace</div>
+                  <div className="text-sm text-gray-600">Prestigious International Award</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Team Achievements */}
         <div className="mt-16">
           <h2 className="text-2xl font-semibold mb-6">Team Excellence</h2>
