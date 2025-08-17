@@ -11,24 +11,18 @@ interface ImageWithFallbackProps {
   height?: number
 }
 
-export function ImageWithFallback({ 
-  src, 
-  alt, 
-  fallback = '🖼️', 
-  className = '', 
-  width, 
-  height 
+export function ImageWithFallback({
+  src,
+  alt,
+  fallback = '🖼️',
+  className = '',
+  width,
+  height
 }: ImageWithFallbackProps) {
   const [hasError, setHasError] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
 
   const handleError = () => {
     setHasError(true)
-    setIsLoading(false)
-  }
-
-  const handleLoad = () => {
-    setIsLoading(false)
   }
 
   if (hasError) {
@@ -40,21 +34,14 @@ export function ImageWithFallback({
   }
 
   return (
-    <>
-      {isLoading && (
-        <div className={`flex items-center justify-center bg-gray-100 animate-pulse ${className}`}>
-          <span className="text-gray-400">Loading...</span>
-        </div>
-      )}
-      <img
-        src={src}
-        alt={alt}
-        className={`${className} ${isLoading ? 'hidden' : ''}`}
-        width={width}
-        height={height}
-        onError={handleError}
-        onLoad={handleLoad}
-      />
-    </>
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      width={width}
+      height={height}
+      onError={handleError}
+      loading="eager"
+    />
   )
 }

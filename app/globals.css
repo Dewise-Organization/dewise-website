@@ -2,15 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS for Dewise logo to ensure maximum size */
+/* Custom CSS for Dewise logo - responsive sizing */
 .dewise-logo {
-  width: 200px !important;
-  height: 200px !important;
-  min-width: 200px !important;
-  min-height: 200px !important;
+  width: 120px !important;
+  height: 120px !important;
+  min-width: 120px !important;
+  min-height: 120px !important;
   max-width: none !important;
   max-height: none !important;
   flex-shrink: 0 !important;
+}
+
+/* Responsive logo sizing for different screen sizes */
+@media (min-width: 640px) {
+  .dewise-logo {
+    width: 140px !important;
+    height: 140px !important;
+    min-width: 140px !important;
+    min-height: 140px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .dewise-logo {
+    width: 160px !important;
+    height: 160px !important;
+    min-width: 160px !important;
+    min-height: 160px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dewise-logo {
+    width: 180px !important;
+    height: 180px !important;
+    min-width: 180px !important;
+    min-height: 180px !important;
+  }
 }
 
 .dewise-logo img {
@@ -23,8 +51,37 @@
 .logo-container {
   display: flex !important;
   align-items: center !important;
-  gap: 1.5rem !important;
+  gap: 1rem !important;
   flex-shrink: 0 !important;
+}
+
+@media (min-width: 640px) {
+  .logo-container {
+    gap: 1.5rem !important;
+  }
+}
+
+/* Responsive header height */
+.responsive-header {
+  min-height: 5rem !important;
+}
+
+@media (min-width: 640px) {
+  .responsive-header {
+    min-height: 6rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-header {
+    min-height: 7rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-header {
+    min-height: 8rem !important;
+  }
 }
 
 html { scroll-behavior: smooth; }
