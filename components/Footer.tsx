@@ -11,17 +11,17 @@ const getImagePath = (path: string) => {
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-gray-200">
-      <div className="container py-10">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="dynamic-container py-10">
+        <div className="dynamic-footer">
           <div className="lg:col-span-2">
-            <div className="logo-container mb-4 sm:mb-6">
+            <div className="dynamic-logo-container mb-6">
               <ImageWithFallback
                 src={getImagePath('/images/dewise-logo.jpg')}
                 alt="Dewise Foundation"
                 fallback="🏢"
-                className="dewise-logo rounded-full shadow-lg border-2 sm:border-4 border-sky-100"
+                className="dynamic-logo shadow-lg border-2 border-sky-100"
               />
-              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-sky-700">Dewise Foundation</div>
+              <div className="dynamic-text font-bold text-sky-700">Dewise Foundation</div>
             </div>
             <p className="mt-2 text-sm text-gray-600">
               Empowering underserved communities through education, clean energy, and climate action.
