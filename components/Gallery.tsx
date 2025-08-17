@@ -1,29 +1,62 @@
 "use client"
 import { useEffect, useState } from 'react'
+import { ImageWithFallback } from './ImageWithFallback'
 
 type ImageItem = { src: string; alt: string }
+
+// Helper function to get correct image path based on environment
+const getImagePath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/dewise-website' : ''
+  return `${basePath}${path}`
+}
 
 export function Gallery({ limit }: { limit?: number }) {
   const [images, setImages] = useState<ImageItem[]>([])
 
   useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetch('/images/index.json')
-        if (!res.ok) return
-        const data: ImageItem[] = await res.json()
-        setImages(limit ? data.slice(0, limit) : data)
-      } catch (e) {
-        // ignore
+    // Use a curated list of properly named images instead of fetching from JSON
+    const curatedImages: ImageItem[] = [
+      {
+        src: getImagePath('/images/wisebox-youth-training-circle.jpg'),
+        alt: 'Youths in circle with Blaise building WiseBoxes'
+      },
+      {
+        src: getImagePath('/images/wisebox-blaise-youth-holding-boxes.jpg'),
+        alt: 'Blaise and trained youth holding WiseBoxes'
+      },
+      {
+        src: getImagePath('/images/wisebox-youths-excited-making-boxes.jpg'),
+        alt: 'Youths excitedly building WiseBoxes'
+      },
+      {
+        src: getImagePath('/images/dewise-mbua-sunspark-project-team.jpg'),
+        alt: 'Dewise and Mboa Hub SunSpark project team'
+      },
+      {
+        src: getImagePath('/images/dewise-mbua-sunspark-project-2.jpg'),
+        alt: 'SunSpark energy project in action'
+      },
+      {
+        src: getImagePath('/images/dewise-fellowship-team-2024.jpg'),
+        alt: 'Energy Transition Fellowship team 2024'
+      },
+      {
+        src: getImagePath('/images/christian-fellowship-presentation.jpg'),
+        alt: 'Christian presenting at fellowship event'
+      },
+      {
+        src: getImagePath('/images/ceo-blaise-christian-certificate.jpg'),
+        alt: 'CEO Blaise and Christian with certificate'
       }
-    }
-    load()
+    ]
+    
+    setImages(limit ? curatedImages.slice(0, limit) : curatedImages)
   }, [limit])
 
   if (!images.length) return (
     <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
       {Array.from({ length: limit ?? 6 }).map((_, i) => (
-        <div key={i} className="aspect-[4/3] animate-pulse rounded-md bg-gray-100" />
+        <div key={i} className="aspect-[4/3] animate-pulse rounded-md bg-sand" />
       ))}
     </div>
   )
@@ -31,13 +64,14 @@ export function Gallery({ limit }: { limit?: number }) {
   return (
     <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
       {images.map((img, i) => (
-        <img
-          key={i}
-          src={img.src}
-          alt={img.alt}
-          loading="lazy"
-          className="aspect-[4/3] w-full rounded-md object-cover"
-        />
+        <div key={i} className="aspect-[4/3] w-full rounded-md overflow-hidden border border-sand">
+          <ImageWithFallback
+            src={img.src}
+            alt={img.alt}
+            fallback="📸"
+            className="w-full h-full object-cover"
+          />
+        </div>
       ))}
     </div>
   )

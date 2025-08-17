@@ -99,6 +99,10 @@ export function Nav() {
               Achievements
             </Link>
             
+            <Link href="/careers" className="text-charcoal hover:text-sky font-medium transition-colors">
+              Careers
+            </Link>
+            
             <Link href="/contact" className="text-charcoal hover:text-sky font-medium transition-colors">
               Contact
             </Link>
@@ -163,6 +167,10 @@ export function Nav() {
               
               <Link href="/achievements" className="block py-2 text-charcoal hover:text-sky font-medium">
                 Achievements
+              </Link>
+              
+              <Link href="/careers" className="block py-2 text-charcoal hover:text-sky font-medium">
+                Careers
               </Link>
               
               <Link href="/contact" className="block py-2 text-charcoal hover:text-sky font-medium">
