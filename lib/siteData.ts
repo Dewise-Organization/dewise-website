@@ -1,3 +1,9 @@
+// Helper function to get correct image path based on environment
+const getImagePath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/dewise-website' : ''
+  return `${basePath}${path}`
+}
+
 export const site = {
   hero: {
     title: 'Empowering Communities with Education and Clean Energy',
@@ -241,7 +247,7 @@ export const site = {
   partners: [
     { 
       name: 'MTN Cameroon',
-      logo: '/images/mtn cameroon.png',
+      logo: getImagePath('/images/mtn-cameroon-logo.png'),
       website: 'https://mtn.cm/',
       description: 'Telecommunications partner supporting digital inclusion',
       // Revolutionary addition: Competition partnership
@@ -249,7 +255,7 @@ export const site = {
     },
     { 
       name: 'Mboa Hub',
-      logo: '/images/Mbua Hub Certificate of Appreciation to Dewise Foundation for active participation in climate justice.jpg',
+      logo: getImagePath('/images/mbua-hub-certificate.jpg'),
       website: 'https://planetone.org/city_page/yaounde/',
       description: 'Youth Climate Justice Makerspace powered by Greenpeace Africa and Fryshuset',
       // Revolutionary addition: Global network connection
@@ -257,7 +263,7 @@ export const site = {
     },
     { 
       name: 'Open Dreams',
-      logo: '/images/open_dreams_logo.jpg',
+      logo: getImagePath('/images/open-dreams-logo.jpg'),
       website: 'https://www.open-dreams.org/',
       description: 'Educational access and scholarship organization',
       // Revolutionary addition: Scholarship achievements
@@ -265,7 +271,7 @@ export const site = {
     },
     { 
       name: 'TiC Foundation',
-      logo: '/images/TiC.jpg',
+      logo: getImagePath('/images/tic-foundation-logo.jpg'),
       website: 'https://www.linkedin.com/company/tic-foundation/posts/?feedView=all',
       description: 'Technology and innovation conference platform',
       // Revolutionary addition: Innovation ecosystem
@@ -277,7 +283,7 @@ export const site = {
       role: 'Cofounder & CEO', 
       name: 'Seka Jean Blaise Tarnyu',
       bio: 'Passionate about community development and youth empowerment, leading strategic initiatives across Cameroon.',
-      image: '/images/Seka Blaise profile pic.png',
+      image: getImagePath('/images/seka-blaise-profile.png'),
       // Revolutionary addition: International recognition
       achievements: [
         "IRENA Youth Ambassador representing Cameroon in global renewable energy initiatives",
@@ -292,7 +298,7 @@ export const site = {
       role: 'Cofounder & Head of Technology', 
       name: 'Triumph Kia Teh',
       bio: 'Technology innovator focused on sustainable solutions and digital transformation for underserved communities.',
-      image: '/images/Triumph dewise profile pic.jpg',
+      image: getImagePath('/images/triumph-kia-teh-profile.jpg'),
       // Revolutionary addition: Academic excellence
       achievements: [
         "Dartmouth College student (Class of 2026) studying Biomedical Engineering and Neuroscience",
@@ -305,14 +311,14 @@ export const site = {
       role: 'Country Director', 
       name: 'Awantu Christian Funwi',
       bio: 'Experienced leader managing operations and partnerships to maximize impact across all programs.',
-      image: '/images/Awantu Christian profile pic.jpg',
+      image: getImagePath('/images/awantu-christian-profile.jpg'),
       credentials: "Experienced leader managing operations and partnerships to maximize impact across all programs"
     },
     { 
       role: 'Design & Marketing Lead', 
       name: 'Makoubo Krystie',
       bio: 'Creative professional crafting compelling narratives and visual identity to amplify our mission.',
-      image: '/images/Makoubo Krystie profile pic.png',
+      image: getImagePath('/images/makoubo-krystie-profile.png'),
       // Revolutionary addition: Scholar recognition
       achievements: [
         "Open Dreams Scholar of the Month recognition",
@@ -326,14 +332,14 @@ export const site = {
       role: 'CPO', 
       name: 'Koumayeb Anushka',
       bio: 'Product strategist ensuring our solutions meet real community needs and deliver measurable impact.',
-      image: '/images/Koumayeb Anushka profile pic.jpg',
+      image: getImagePath('/images/koumayeb-anushka-profile.jpg'),
       credentials: "Product strategist ensuring our solutions meet real community needs and deliver measurable impact"
     },
     { 
       role: 'Product Design & Development Lead', 
       name: 'Engineer N. Desmond',
       bio: 'Technical expert developing innovative solutions for clean energy and community development challenges.',
-      image: '/images/Engineer N. Desmond profile pic.jpg',
+      image: '', // No profile picture available
       credentials: "Technical expert developing innovative solutions for clean energy and community development challenges"
     }
   ],

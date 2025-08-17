@@ -2,6 +2,12 @@ import Link from 'next/link'
 import { site } from '@/lib/siteData'
 import { ImageWithFallback } from './ImageWithFallback'
 
+// Helper function to get correct image path based on environment
+const getImagePath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/dewise-website' : ''
+  return `${basePath}${path}`
+}
+
 export function Footer() {
   return (
     <footer className="mt-16 border-t border-gray-200">
@@ -10,7 +16,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-3">
               <ImageWithFallback 
-                src="/images/dewise_logo.jpg" 
+                src={getImagePath('/images/dewise-logo.jpg')} 
                 alt="Dewise Foundation" 
                 fallback="🏢"
                 className="w-10 h-10 rounded-full"

@@ -2,13 +2,19 @@ import Link from 'next/link'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { ImageWithFallback } from './ImageWithFallback'
 
+// Helper function to get correct image path based on environment
+const getImagePath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/dewise-website' : ''
+  return `${basePath}${path}`
+}
+
 export function Nav() {
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3 text-lg font-semibold text-sky-700">
           <ImageWithFallback 
-            src="/images/dewise_logo.jpg" 
+            src={getImagePath('/images/dewise-logo.jpg')} 
             alt="Dewise Foundation" 
             fallback="🏢"
             className="w-8 h-8 rounded-full"
