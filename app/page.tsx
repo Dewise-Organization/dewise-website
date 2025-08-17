@@ -42,6 +42,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Revolutionary Addition: International Recognition Section */}
+      <section className="bg-gradient-to-r from-yellow-50 to-orange-50">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">{site.hero.recognition.title}</h2>
+            <p className="text-lg text-gray-600">Our work is gaining international recognition and transforming lives across Cameroon</p>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {site.hero.recognition.highlights.map((highlight, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-yellow-200 hover:shadow-md transition-shadow">
+                <div className="text-center">
+                  <div className="text-3xl mb-3">🏆</div>
+                  <h3 className="font-semibold text-gray-900 text-sm leading-tight">{highlight}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link href="/achievements" className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium">
+              View All Achievements
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Focus Areas with Icons and Better Visuals */}
       <section className="mx-auto max-w-7xl px-6 py-14">
         <h2 className="text-2xl font-semibold">Our Focus Areas</h2>
@@ -105,6 +133,13 @@ export default function HomePage() {
               <div className="text-xs text-gray-500 mt-1">{partner.description}</div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-8">
+          <Link href="/partnerships" className="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium">
+            Learn About Our Strategic Partnerships
+            <span>→</span>
+          </Link>
         </div>
       </section>
 

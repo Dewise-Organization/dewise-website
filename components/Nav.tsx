@@ -12,6 +12,8 @@ export function Nav() {
           <Link href="/about" className="hover:text-sky-700">About</Link>
           <Link href="/programs" className="hover:text-sky-700">Programs</Link>
           <Link href="/projects" className="hover:text-sky-700">Projects</Link>
+          <Link href="/achievements" className="hover:text-sky-700">Achievements</Link>
+          <Link href="/partnerships" className="hover:text-sky-700">Partnerships</Link>
           <Link href="/blog" className="hover:text-sky-700">Blog</Link>
           <Link href="/news" className="hover:text-sky-700">News</Link>
           <Link href="/team" className="hover:text-sky-700">Team</Link>

@@ -7,6 +7,16 @@ export const site = {
       title: "Meet Amina's Story",
       content: "Amina, a 16-year-old from rural Cameroon, now studies after dark thanks to our solar lamp program. Her grades improved from C's to A's, and she dreams of becoming an engineer.",
       impact: "500+ students like Amina now have reliable lighting for their studies"
+    },
+    // Revolutionary addition: International recognition
+    recognition: {
+      title: "Internationally Recognized Excellence",
+      highlights: [
+        "IRENA Youth Ambassador representing Cameroon",
+        "3rd Place MTN PachiPanda Challenge 2024",
+        "SEforALL 2025 Energy Heroes Award Shortlist",
+        "Global Solutions Initiative Recognition"
+      ]
     }
   },
   focusAreas: [
@@ -31,7 +41,13 @@ export const site = {
         '20+ communities engaged',
         '500+ community members trained',
         '15+ local projects completed'
-      ]
+      ],
+      // Revolutionary addition: Crisis response context
+      crisisContext: {
+        title: "Addressing the Anglophone Crisis",
+        description: "Supporting 5,000+ displaced persons during ongoing humanitarian crisis affecting 580,000+ people in Northwest and Southwest regions since 2017",
+        impact: "Educational continuity for children in conflict-affected regions"
+      }
     },
     {
       slug: 'youth',
@@ -54,7 +70,13 @@ export const site = {
         '500+ youths trained',
         '50+ scholarships awarded',
         '100+ mentorship relationships'
-      ]
+      ],
+      // Revolutionary addition: DeWise Fellowship
+      fellowship: {
+        title: "DeWise Fellowship Program",
+        description: "Empowering displaced youth to propose community solutions, specifically addressing the needs of 638,000+ internally displaced persons across Anglophone regions",
+        capacity: "Annual training of 20 youth through DeWise-Mboa SunSpark Energy Accelerator"
+      }
     },
     {
       slug: 'climate',
@@ -77,7 +99,13 @@ export const site = {
         '10,000+ trees planted',
         '25+ waste management projects',
         '1,000+ people educated'
-      ]
+      ],
+      // Revolutionary addition: Climate Justice Movement
+      climateJustice: {
+        title: "Climate Justice Movement",
+        description: "Active participation in international climate advocacy through Climate Justice Camp in Lebanon, funded by Greenpeace Africa",
+        network: "Connected to Planet One global network operating makerspaces across six countries"
+      }
     },
     {
       slug: 'energy',
@@ -100,7 +128,13 @@ export const site = {
         '15+ solar installations',
         '500+ homes powered',
         '3 schools fully electrified'
-      ]
+      ],
+      // Revolutionary addition: Market opportunity context
+      marketContext: {
+        title: "Addressing Cameroon's Energy Crisis",
+        description: "Only 22% of households in northern regions have electricity access, while over 95% still rely on wood for cooking",
+        opportunity: "UNESCO's parallel PUERTEM project successfully distributed solar kits to over 3,000 households, demonstrating market receptivity"
+      }
     }
   ],
   projects: [
@@ -130,6 +164,17 @@ export const site = {
       beforeAfter: {
         before: 'Medicines spoiled within days due to heat',
         after: 'Medicines preserved for months with solar cooling'
+      },
+      // Revolutionary addition: International recognition
+      recognition: {
+        title: "Global Recognition",
+        achievements: [
+          "3rd Place MTN PachiPanda Challenge 2024",
+          "Advanced to continental competition level",
+          "International recognition through Global Solutions Initiative",
+          "Addresses healthcare delivery in Etoug-Ebe community"
+        ],
+        innovation: "Extends medicine shelf life from 1 day to over 365 days while enabling remote medical consultations"
       }
     },
     {
@@ -184,6 +229,12 @@ export const site = {
       beforeAfter: {
         before: 'Schools without reliable power for learning',
         after: 'Schools with 24/7 power for digital education'
+      },
+      // Revolutionary addition: Crisis response context
+      crisisContext: {
+        title: "Addressing Educational Infrastructure Crisis",
+        description: "Launched in July 2024 with 6-week implementation timeline, targeting critical gap where 2,066 schools remain non-operational",
+        impact: "Supporting 488,656 children affected by education crisis in conflict-affected regions"
       }
     }
   ],
@@ -191,22 +242,30 @@ export const site = {
     { 
       name: 'MTN Cameroon',
       logo: '/images/mtn-logo.png',
-      description: 'Telecommunications partner supporting digital inclusion'
+      description: 'Telecommunications partner supporting digital inclusion',
+      // Revolutionary addition: Competition partnership
+      partnership: "Host of PachiPanda Challenge 2024 where WiseCool secured 3rd place, advancing to continental competition"
     },
     { 
-      name: 'Mbua Hub',
+      name: 'Mboa Hub',
       logo: '/images/mbua-logo.png',
-      description: 'Innovation hub fostering tech entrepreneurship'
+      description: 'Youth Climate Justice Makerspace powered by Greenpeace Africa and Fryshuset',
+      // Revolutionary addition: Global network connection
+      partnership: "Connected to Planet One global network operating makerspaces across six countries. Launched DeWise-Mboa SunSpark Energy Accelerator Program training 20 youth annually"
     },
     { 
       name: 'Open Dreams',
       logo: '/images/opendreams-logo.png',
-      description: 'Educational access and scholarship organization'
+      description: 'Educational access and scholarship organization',
+      // Revolutionary addition: Scholarship achievements
+      partnership: "Supported over 200 scholars in accessing international scholarships, with operational centers in Bamenda and Yaoundé. 3-month Summer Academy provides comprehensive college preparation"
     },
     { 
-      name: 'TiC Summit',
+      name: 'TiC Foundation',
       logo: '/images/tic-logo.png',
-      description: 'Technology and innovation conference platform'
+      description: 'Technology and innovation conference platform',
+      // Revolutionary addition: Innovation ecosystem
+      partnership: "Three flagship programs: TiC Startup Accelerator, TiC Summit (national innovation competition), and TiC Bootcamp. Supported over 100 startups and registered more than 20 companies"
     }
   ],
   team: [
@@ -214,37 +273,64 @@ export const site = {
       role: 'Cofounder & CEO', 
       name: 'Seka Jean Blaise Tarnyu',
       bio: 'Passionate about community development and youth empowerment, leading strategic initiatives across Cameroon.',
-      image: '/images/team/seka.jpg'
+      image: '/images/team/seka.jpg',
+      // Revolutionary addition: International recognition
+      achievements: [
+        "IRENA Youth Ambassador representing Cameroon in global renewable energy initiatives",
+        "3rd Place MTN PachiPanda Challenge 2024 with WiseCool project",
+        "Shortlisted for prestigious SEforALL 2025 Energy Heroes Award",
+        "Participant in Climate Justice Camp in Lebanon, funded by Greenpeace Africa",
+        "International recognition through Global Solutions Initiative"
+      ],
+      credentials: "Leading strategic initiatives across Cameroon with focus on renewable energy and youth empowerment"
     },
     { 
       role: 'Cofounder & Head of Technology', 
       name: 'Triumph Kia Teh',
       bio: 'Technology innovator focused on sustainable solutions and digital transformation for underserved communities.',
-      image: '/images/team/triumph.jpg'
+      image: '/images/team/triumph.jpg',
+      // Revolutionary addition: Academic excellence
+      achievements: [
+        "Dartmouth College student (Class of 2026) studying Biomedical Engineering and Neuroscience",
+        "Significant community health work through DESERVE organization combating HIV/AIDS in Cameroon",
+        "Over three years of community engagement experience"
+      ],
+      credentials: "Biomedical Engineering and Neuroscience student at Dartmouth College with extensive community health experience"
     },
     { 
       role: 'Country Director', 
       name: 'Awantu Christian Funwi',
       bio: 'Experienced leader managing operations and partnerships to maximize impact across all programs.',
-      image: '/images/team/awantu.jpg'
+      image: '/images/team/awantu.jpg',
+      credentials: "Experienced leader managing operations and partnerships to maximize impact across all programs"
     },
     { 
       role: 'Design & Marketing Lead', 
       name: 'Makoubo Krystie',
       bio: 'Creative professional crafting compelling narratives and visual identity to amplify our mission.',
-      image: '/images/team/krystie.jpg'
+      image: '/images/team/krystie.jpg',
+      // Revolutionary addition: Scholar recognition
+      achievements: [
+        "Open Dreams Scholar of the Month recognition",
+        "Dual expertise as Civil Engineering student and architectural designer",
+        "Operates as architectural designer and marketing lead at CHICAD Academy",
+        "Empowers students with industry-standard design software training"
+      ],
+      credentials: "Civil Engineering student and architectural designer recognized as Open Dreams Scholar of the Month"
     },
     { 
       role: 'CPO', 
       name: 'Koumayeb Anushka',
       bio: 'Product strategist ensuring our solutions meet real community needs and deliver measurable impact.',
-      image: '/images/team/anushka.jpg'
+      image: '/images/team/anushka.jpg',
+      credentials: "Product strategist ensuring our solutions meet real community needs and deliver measurable impact"
     },
     { 
       role: 'Product Design & Development Lead', 
       name: 'Engineer N. Desmond',
       bio: 'Technical expert developing innovative solutions for clean energy and community development challenges.',
-      image: '/images/team/desmond.jpg'
+      image: '/images/team/desmond.jpg',
+      credentials: "Technical expert developing innovative solutions for clean energy and community development challenges"
     }
   ],
   socials: [
@@ -270,13 +356,13 @@ export const site = {
     },
     {
       year: '2024',
-      title: 'Community Expansion',
-      description: 'Reached 20+ communities across Cameroon'
+      title: 'International Recognition & Crisis Response',
+      description: '3rd Place MTN PachiPanda Challenge, Climate Justice Camp participation, supporting 5,000+ displaced persons during Anglophone Crisis'
     },
     {
       year: '2025',
-      title: 'Website Launch',
-      description: 'Launched official website to expand our reach and impact'
+      title: 'SEforALL Energy Heroes Award & Website Launch',
+      description: 'Shortlisted for prestigious SEforALL 2025 Energy Heroes Award, launched official website to expand reach and impact'
     }
   ],
   testimonials: [
@@ -321,7 +407,40 @@ export const site = {
       description: "Help power a medical facility",
       impact: "1,000+ patients served"
     }
-  ]
+  ],
+  // Revolutionary addition: Crisis response metrics
+  crisisResponse: {
+    title: "Humanitarian Crisis Response",
+    context: "Addressing the ongoing Anglophone Crisis that has displaced 580,000+ people in Northwest and Southwest regions since 2017",
+    impact: [
+      "5,000+ displaced persons supported",
+      "Educational continuity for children in conflict-affected regions",
+      "Healthcare access improvement in off-grid communities",
+      "Community resilience building through energy democracy"
+    ],
+    programs: [
+      "DeWise Fellowship: Empowering displaced youth to propose community solutions",
+      "Solar Bright Minds: Addressing educational infrastructure gap affecting 488,656 children",
+      "Community engagement: Supporting 20+ communities across conflict-affected regions"
+    ]
+  },
+  // Revolutionary addition: Innovation ecosystem
+  innovationEcosystem: {
+    title: "Cameroon's Innovation Ecosystem",
+    context: "The country's innovation ecosystem has experienced 200% growth in entrepreneurship programs",
+    opportunities: [
+      "Multiple innovation hubs creating supportive environment for tech-enabled solutions",
+      "UNESCO's parallel PUERTEM project successfully distributed solar kits to over 3,000 households",
+      "Market receptivity for community solar solutions demonstrated",
+      "Supportive environment for tech-enabled solutions"
+    ]
+  },
+  // Revolutionary addition: Investment in youth
+  youthInvestment: {
+    title: "Investment in Youth Innovation",
+    context: "Awarded over $5,000 in grants to support young innovators",
+    impact: "Demonstrating concrete investment in youth empowerment beyond programmatic activities"
+  }
 }
 
 export type ImageItem = { src: string; alt: string }

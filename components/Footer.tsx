@@ -34,6 +34,8 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-sky-700">About</Link></li>
               <li><Link href="/programs" className="hover:text-sky-700">Programs</Link></li>
               <li><Link href="/projects" className="hover:text-sky-700">Projects</Link></li>
+              <li><Link href="/achievements" className="hover:text-sky-700">Achievements</Link></li>
+              <li><Link href="/partnerships" className="hover:text-sky-700">Partnerships</Link></li>
               <li><Link href="/impact" className="hover:text-sky-700">Impact</Link></li>
             </ul>
           </div>
