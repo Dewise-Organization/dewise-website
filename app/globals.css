@@ -2,6 +2,133 @@
 @tailwind components;
 @tailwind utilities;
 
+/* African-Inspired Color Palette */
+:root {
+  --color-earth: #8B4513;      /* Rich brown - earth tones */
+  --color-sand: #F4E4BC;       /* Warm sand - neutral background */
+  --color-terracotta: #CD5C5C; /* Terracotta red - accent */
+  --color-forest: #2F4F2F;     /* Deep forest green - nature */
+  --color-sunset: #D2691E;     /* Sunset orange - warmth */
+  --color-sky: #4682B4;        /* African sky blue - trust */
+  --color-gold: #DAA520;       /* African gold - achievement */
+  --color-charcoal: #36454F;   /* Charcoal - text and borders */
+  --color-cream: #FDF5E6;      /* Cream - light backgrounds */
+  --color-amber: #FF8C00;      /* Amber - highlights */
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .bg-earth { background-color: var(--color-earth); }
+  .bg-sand { background-color: var(--color-sand); }
+  .bg-terracotta { background-color: var(--color-terracotta); }
+  .bg-forest { background-color: var(--color-forest); }
+  .bg-sunset { background-color: var(--color-sunset); }
+  .bg-sky { background-color: var(--color-sky); }
+  .bg-gold { background-color: var(--color-gold); }
+  .bg-charcoal { background-color: var(--color-charcoal); }
+  .bg-cream { background-color: var(--color-cream); }
+  .bg-amber { background-color: var(--color-amber); }
+  
+  .text-earth { color: var(--color-earth); }
+  .text-sand { color: var(--color-sand); }
+  .text-terracotta { color: var(--color-terracotta); }
+  .text-forest { color: var(--color-forest); }
+  .text-sunset { color: var(--color-sunset); }
+  .text-sky { color: var(--color-sky); }
+  .text-gold { color: var(--color-gold); }
+  .text-charcoal { color: var(--color-charcoal); }
+  .text-cream { color: var(--color-cream); }
+  .text-amber { color: var(--color-amber); }
+  
+  .border-earth { border-color: var(--color-earth); }
+  .border-sand { border-color: var(--color-sand); }
+  .border-terracotta { border-color: var(--color-terracotta); }
+  .border-forest { border-color: var(--color-forest); }
+  .border-sky { border-color: var(--color-sky); }
+  .border-gold { border-color: var(--color-gold); }
+}
+
+/* Professional typography */
+@layer base {
+  body {
+    @apply text-charcoal bg-cream;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-charcoal;
+  }
+}
+
+/* African-inspired design elements */
+.african-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--color-gold) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--color-terracotta) 2px, transparent 2px);
+  background-size: 20px 20px;
+}
+
+.african-border {
+  border: 2px solid var(--color-gold);
+  border-radius: 8px;
+  position: relative;
+}
+
+.african-border::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, var(--color-gold), var(--color-terracotta));
+  border-radius: 12px;
+  z-index: -1;
+}
+
+/* Professional button styles */
+.btn-primary {
+  @apply bg-sky text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-forest focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply bg-cream text-charcoal border-2 border-sky px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-sky hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.btn-accent {
+  @apply bg-gold text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-sunset focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-sand p-6 transition-all duration-200 hover:shadow-md hover:border-sky;
+}
+
+.card-accent {
+  @apply bg-sand rounded-lg shadow-sm border-2 border-gold p-6 transition-all duration-200 hover:shadow-md;
+}
+
+/* Section backgrounds */
+.section-light {
+  @apply bg-cream;
+}
+
+.section-accent {
+  @apply bg-sand;
+}
+
+.section-dark {
+  @apply bg-charcoal text-white;
+}
+
+/* Professional spacing */
+.section-padding {
+  @apply py-16 px-6;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
+}
+
 /* Professional centered layout with proper margins */
 .container {
   @apply mx-auto max-w-7xl px-6;

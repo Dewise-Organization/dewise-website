@@ -10,8 +10,8 @@ const getImagePath = (path: string) => {
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-gray-200">
-      <div className="container py-10">
+    <footer className="mt-16 border-t border-sand bg-charcoal text-white">
+      <div className="container-max py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="logo-container mb-6">
@@ -19,58 +19,67 @@ export function Footer() {
                 src={getImagePath('/images/dewise-logo.jpg')}
                 alt="Dewise Foundation"
                 fallback="🏢"
-                className="dewise-logo rounded-full shadow-lg border-2 border-sky-100"
+                className="dewise-logo rounded-full shadow-lg border-2 border-gold"
               />
             </div>
-            <p className="mt-2 text-sm text-gray-600">
+            <p className="mt-2 text-sm text-cream">
               Empowering underserved communities through education, clean energy, and climate action.
             </p>
-            
-            {/* Newsletter Signup */}
-            <div className="mt-6">
-              <h4 className="text-sm font-semibold text-gray-700 mb-3">Stay Updated</h4>
-              <div className="flex gap-2">
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
-                  className="flex-1 rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                />
-                <button className="rounded-md bg-primary px-4 py-2 text-sm text-white hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
-                  Subscribe
-                </button>
-              </div>
-            </div>
           </div>
-          
+
           <div>
-            <div className="text-sm font-semibold uppercase text-gray-700">Explore</div>
-            <ul className="mt-2 space-y-1 text-sm">
-              <li><Link href="/about" className="hover:text-sky-700">About</Link></li>
-              <li><Link href="/programs" className="hover:text-sky-700">Programs</Link></li>
-              <li><Link href="/projects" className="hover:text-sky-700">Projects</Link></li>
-              <li><Link href="/achievements" className="hover:text-sky-700">Achievements</Link></li>
-              <li><Link href="/partnerships" className="hover:text-sky-700">Partnerships</Link></li>
-              <li><Link href="/impact" className="hover:text-sky-700">Impact</Link></li>
+            <h3 className="text-sm font-semibold text-gold mb-4">Programs</h3>
+            <ul className="space-y-2 text-sm text-cream">
+              <li><Link href="/programs/clean-energy" className="hover:text-gold transition-colors">Clean Energy</Link></li>
+              <li><Link href="/programs/climate-action" className="hover:text-gold transition-colors">Climate Action</Link></li>
+              <li><Link href="/programs/community-engagement" className="hover:text-gold transition-colors">Community Engagement</Link></li>
+              <li><Link href="/programs/youth-empowerment" className="hover:text-gold transition-colors">Youth Empowerment</Link></li>
             </ul>
           </div>
-          
+
           <div>
-            <div className="text-sm font-semibold uppercase text-gray-700">Connect</div>
-            <ul className="mt-2 space-y-1 text-sm">
-              {site.socials.map((s) => (
-                <li key={s.label}><a className="hover:text-sky-700" href={s.href} target="_blank" rel="noreferrer">{s.label}</a></li>
-              ))}
+            <h3 className="text-sm font-semibold text-gold mb-4">Projects</h3>
+            <ul className="space-y-2 text-sm text-cream">
+              <li><Link href="/projects/wisebox" className="hover:text-gold transition-colors">WiseBox</Link></li>
+              <li><Link href="/projects/wisecool" className="hover:text-gold transition-colors">WiseCool</Link></li>
+              <li><Link href="/projects/solar-bright-minds" className="hover:text-gold transition-colors">Solar Bright Minds</Link></li>
             </ul>
           </div>
-          
+
           <div>
-            <div className="text-sm font-semibold uppercase text-gray-700">Support</div>
-            <p className="mt-2 text-sm text-gray-600">Your donation powers education and energy access.</p>
-            <Link href="/donate" className="mt-3 inline-block rounded-md bg-primary px-4 py-2 text-white hover:bg-sky-600">Donate</Link>
+            <h3 className="text-sm font-semibold text-gold mb-4">Connect</h3>
+            <ul className="space-y-2 text-sm text-cream">
+              <li><Link href="/about" className="hover:text-gold transition-colors">About Us</Link></li>
+              <li><Link href="/team" className="hover:text-gold transition-colors">Our Team</Link></li>
+              <li><Link href="/contact" className="hover:text-gold transition-colors">Contact</Link></li>
+              <li><Link href="/donate" className="hover:text-gold transition-colors">Donate</Link></li>
+            </ul>
           </div>
         </div>
-        
-        <div className="mt-10 text-center text-sm text-gray-500">© {new Date().getFullYear()} Dewise Foundation. All rights reserved.</div>
+
+        {/* Newsletter Signup */}
+        <div className="mt-8 pt-8 border-t border-sand">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold text-gold mb-3">Stay Updated</h3>
+            <p className="text-sm text-cream mb-4">Get updates on our projects and impact stories.</p>
+            <div className="flex max-w-md mx-auto gap-3">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="flex-1 rounded-lg border border-sand px-4 py-2 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold text-charcoal"
+              />
+              <button className="bg-gold text-white px-4 py-2 rounded-lg hover:bg-sunset transition-colors focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-8 border-t border-sand text-center">
+          <p className="text-xs text-cream">
+            © 2024 Dewise Foundation. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   )
