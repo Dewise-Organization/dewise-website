@@ -21,7 +21,6 @@ export function Footer() {
                 fallback="🏢"
                 className="dewise-logo rounded-full shadow-lg border-2 border-sky-100"
               />
-              <div className="responsive-text font-bold text-sky-700">Dewise Foundation</div>
             </div>
             <p className="mt-2 text-sm text-gray-600">
               Empowering underserved communities through education, clean energy, and climate action.

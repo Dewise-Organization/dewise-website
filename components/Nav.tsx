@@ -20,7 +20,6 @@ export function Nav() {
               fallback="🏢"
               className="dewise-logo rounded-full shadow-lg border-2 border-sky-100"
             />
-            <span className="responsive-text font-bold text-sky-700">Dewise Foundation</span>
           </Link>
           
           <nav className="professional-nav">
