@@ -11,7 +11,7 @@ export default function ContactPage() {
           <div>
             <p className="text-gray-700">We would love to hear from you.</p>
             <ul className="mt-4 space-y-2 text-gray-700">
-              <li>Email: <a className="text-sky-700" href="mailto:contact@dewisefoundation.org">contact@dewisefoundation.org</a></li>
+              <li>Email: <a className="text-sky-700" href="mailto:infodewise@gmail.com">infodewise@gmail.com</a></li>
               <li>Location: Yaoundé, Cameroon</li>
             </ul>
           </div>
