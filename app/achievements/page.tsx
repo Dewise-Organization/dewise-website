@@ -1,7 +1,7 @@
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
-import { ImageWithFallback } from '@/components/ImageWithFallback'
 import { site } from '@/lib/siteData'
+import { ImageWithFallback } from '@/components/ImageWithFallback'
 
 export default function AchievementsPage() {
   const wisecoolProject = site.projects.find(p => p.slug === 'wisecool')
@@ -25,7 +25,7 @@ export default function AchievementsPage() {
                 <ImageWithFallback 
                   src={certificate.src} 
                   alt={certificate.alt} 
-                  fallback="🏆"
+                  fallback=""
                   className="w-full h-48 object-cover rounded-t-lg"
                 />
                 <div className="p-4">
@@ -35,15 +35,15 @@ export default function AchievementsPage() {
             ))}
           </div>
         </div>
-
+        
         {/* International Recognition Section */}
         <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-6 text-charcoal">International Recognition</h2>
+          <h2 className="text-2xl font-semibold mb-6">International Recognition</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {site.hero.recognition.highlights.map((highlight, index) => (
               <div key={index} className="card-accent">
                 <div className="flex items-start gap-4">
-                  <div className="text-2xl">🏆</div>
+                  <div className="text-2xl text-gold">Award</div>
                   <div>
                     <h3 className="font-semibold text-charcoal">{highlight}</h3>
                     <p className="text-sm text-charcoal mt-1">International recognition for excellence</p>
@@ -63,19 +63,19 @@ export default function AchievementsPage() {
                 <h3 className="text-xl font-semibold text-charcoal mb-4">WiseBox: Sole Dartmouth Recipient</h3>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start gap-3">
-                    <div className="text-gold text-lg">🏆</div>
+                    <div className="text-gold text-lg">Award</div>
                     <span className="text-charcoal">Selected from 125 U.S.-funded projects nationwide</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="text-gold text-lg">🌟</div>
+                    <div className="text-gold text-lg">Recognition</div>
                     <span className="text-charcoal">Sole Dartmouth recipient of prestigious Davis Foundation award</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="text-gold text-lg">📅</div>
+                    <div className="text-gold text-lg">Timeline</div>
                     <span className="text-charcoal">Summer 2025 expansion planned for crisis-affected regions</span>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="text-gold text-lg">🌍</div>
+                    <div className="text-gold text-lg">Global</div>
                     <span className="text-charcoal">International recognition for innovative community energy solutions</span>
                   </div>
                 </div>
@@ -91,8 +91,8 @@ export default function AchievementsPage() {
               
               <div className="flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-6xl mb-4">⚡</div>
-                  <div className="text-2xl font-bold text-sky">Davis Projects for Peace</div>
+                  <div className="text-6xl mb-4 text-gold">Davis</div>
+                  <div className="text-2xl font-bold text-sky">Projects for Peace</div>
                   <div className="text-sm text-charcoal">Prestigious International Award</div>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function AchievementsPage() {
                   <div className="space-y-3">
                     {wisecoolProject.recognition.achievements.map((achievement, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <div className="text-forest text-lg">✓</div>
+                        <div className="text-forest text-lg">Achievement</div>
                         <span className="text-charcoal">{achievement}</span>
                       </div>
                     ))}
@@ -124,7 +124,7 @@ export default function AchievementsPage() {
                   </div>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="text-6xl text-forest">🏥</div>
+                  <div className="text-6xl text-forest">WiseCool</div>
                 </div>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function AchievementsPage() {
                   <ImageWithFallback 
                     src={image.src} 
                     alt={image.alt} 
-                    fallback="🌱"
+                    fallback=""
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
                   <div className="p-4">
@@ -154,7 +154,7 @@ export default function AchievementsPage() {
               ))}
             </div>
           </div>
-
+          
           {/* Fellowship Program */}
           <div>
             <h3 className="text-xl font-semibold text-forest mb-6">Energy Transition Fellowship 2024</h3>
@@ -164,7 +164,7 @@ export default function AchievementsPage() {
                   <ImageWithFallback 
                     src={image.src} 
                     alt={image.alt} 
-                    fallback="🌟"
+                    fallback=""
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
                   <div className="p-4">
@@ -221,7 +221,7 @@ export default function AchievementsPage() {
               {site.innovationEcosystem.opportunities.map((opportunity, index) => (
                 <div key={index} className="bg-white p-4 rounded-lg border border-sand">
                   <div className="flex items-start gap-3">
-                    <div className="text-sky text-lg">💡</div>
+                    <div className="text-sky text-lg">Innovation</div>
                     <span className="text-charcoal">{opportunity}</span>
                   </div>
                 </div>

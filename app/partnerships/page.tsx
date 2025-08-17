@@ -50,37 +50,37 @@ export default function PartnershipsPage() {
           <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Partnership Areas</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🌱</div>
+              <div className="text-4xl text-forest mb-4">Clean Energy</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Clean Energy</h3>
               <p className="text-charcoal text-sm">Collaborate on solar installations, energy efficiency, and renewable energy projects.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">📚</div>
+              <div className="text-4xl text-forest mb-4">Education</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Education</h3>
               <p className="text-charcoal text-sm">Support youth training programs, scholarships, and educational infrastructure development.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🌍</div>
+              <div className="text-4xl text-forest mb-4">Climate Action</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Climate Action</h3>
               <p className="text-charcoal text-sm">Partner on climate resilience, environmental protection, and sustainable development initiatives.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🏥</div>
+              <div className="text-4xl text-forest mb-4">Healthcare</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Healthcare</h3>
               <p className="text-charcoal text-sm">Collaborate on health infrastructure, vaccine preservation, and community health programs.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">💼</div>
+              <div className="text-4xl text-forest mb-4">Youth Empowerment</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Youth Empowerment</h3>
               <p className="text-charcoal text-sm">Support skills development, entrepreneurship, and leadership training for young people.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🏗️</div>
+              <div className="text-4xl text-forest mb-4">Infrastructure</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Infrastructure</h3>
               <p className="text-charcoal text-sm">Partner on community infrastructure, technology access, and sustainable development projects.</p>
             </div>

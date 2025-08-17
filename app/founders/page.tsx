@@ -85,19 +85,19 @@ export default function FoundersPage() {
           <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Vision & Values</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🎯</div>
+              <div className="text-4xl text-forest mb-4">Mission-Driven</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Mission-Driven</h3>
               <p className="text-charcoal text-sm">Every action we take is guided by our mission to empower communities through sustainable solutions.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🤝</div>
+              <div className="text-4xl text-forest mb-4">Community-First</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Community-First</h3>
               <p className="text-charcoal text-sm">We believe in working with communities, not for them, ensuring sustainable and meaningful impact.</p>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">💡</div>
+              <div className="text-4xl text-forest mb-4">Innovation</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Innovation</h3>
               <p className="text-charcoal text-sm">We continuously seek innovative approaches to address complex community challenges.</p>
             </div>

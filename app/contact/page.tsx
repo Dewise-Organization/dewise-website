@@ -22,7 +22,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="card">
                 <div className="flex items-start gap-4">
-                  <div className="text-2xl text-sky">📧</div>
+                  <div className="text-2xl text-sky">Email</div>
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Email</h3>
                     <p className="text-charcoal">We would love to hear from you.</p>
@@ -36,7 +36,7 @@ export default function ContactPage() {
 
               <div className="card">
                 <div className="flex items-start gap-4">
-                  <div className="text-2xl text-sky">📍</div>
+                  <div className="text-2xl text-sky">Location</div>
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Location</h3>
                     <p className="text-charcoal">Our main office is located in the heart of Yaoundé, Cameroon's capital city.</p>
@@ -50,7 +50,7 @@ export default function ContactPage() {
 
               <div className="card">
                 <div className="flex items-start gap-4">
-                  <div className="text-2xl text-sky">⏰</div>
+                  <div className="text-2xl text-sky">Response Time</div>
                   <div>
                     <h3 className="font-semibold text-charcoal mb-1">Response Time</h3>
                     <p className="text-charcoal">We typically respond to all inquiries within 24-48 hours.</p>
@@ -154,21 +154,21 @@ export default function ContactPage() {
           <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Other Ways to Connect</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🤝</div>
+              <div className="text-4xl text-forest mb-4">Partnerships</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Partnerships</h3>
               <p className="text-charcoal text-sm mb-4">Interested in collaborating with us?</p>
               <a href="/partnerships" className="btn-secondary w-full">Learn More</a>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">💼</div>
+              <div className="text-4xl text-forest mb-4">Careers</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Careers</h3>
               <p className="text-charcoal text-sm mb-4">Join our team and make a difference</p>
               <a href="mailto:infodewise@gmail.com?subject=Career Inquiry" className="btn-secondary w-full">Apply Now</a>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">📰</div>
+              <div className="text-4xl text-forest mb-4">Media</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Media</h3>
               <p className="text-charcoal text-sm mb-4">Press inquiries and media requests</p>
               <a href="mailto:infodewise@gmail.com?subject=Media Inquiry" className="btn-secondary w-full">Contact Press</a>

@@ -58,21 +58,21 @@ export default function DonatePage() {
           <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Other Ways to Support</h2>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🏦</div>
+              <div className="text-4xl text-forest mb-4">Bank Transfer</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Bank Transfer</h3>
               <p className="text-charcoal text-sm mb-4">Direct bank transfer to our foundation account</p>
               <button className="btn-secondary w-full">Get Details</button>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">📦</div>
+              <div className="text-4xl text-forest mb-4">In-Kind Support</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">In-Kind Support</h3>
               <p className="text-charcoal text-sm mb-4">Donate equipment, materials, or services</p>
               <button className="btn-secondary w-full">Learn More</button>
             </div>
             
             <div className="card text-center">
-              <div className="text-4xl text-forest mb-4">🤝</div>
+              <div className="text-4xl text-forest mb-4">Volunteer</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Volunteer</h3>
               <p className="text-charcoal text-sm mb-4">Share your time and expertise with us</p>
               <button className="btn-secondary w-full">Get Involved</button>
@@ -98,19 +98,19 @@ export default function DonatePage() {
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Your Trust Matters</h2>
           <div className="bg-gradient-to-r from-sand to-cream p-8 rounded-lg border-2 border-gold">
-            <div className="grid gap-6 md:grid-cols-3 text-center">
+            <div className="grid gap-6 md:grid-cols-2">
               <div>
-                <div className="text-3xl text-gold mb-2">🔒</div>
+                <div className="text-3xl text-gold mb-2">Security</div>
                 <h3 className="font-semibold text-charcoal mb-2">Secure Donations</h3>
                 <p className="text-sm text-charcoal">All transactions are encrypted and secure</p>
               </div>
               <div>
-                <div className="text-3xl text-gold mb-2">📊</div>
+                <div className="text-3xl text-gold mb-2">Transparency</div>
                 <h3 className="font-semibold text-charcoal mb-2">Transparency</h3>
                 <p className="text-sm text-charcoal">Regular reports on how your donations are used</p>
               </div>
               <div>
-                <div className="text-3xl text-gold mb-2">🎯</div>
+                <div className="text-3xl text-gold mb-2">Impact</div>
                 <h3 className="font-semibold text-charcoal mb-2">Direct Impact</h3>
                 <p className="text-sm text-charcoal">100% of donations go directly to programs</p>
               </div>

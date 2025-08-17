@@ -19,7 +19,7 @@ export default function AboutPage() {
         {/* Mission, Values, Vision Section */}
         <div className="grid gap-8 md:grid-cols-3 mb-16">
           <div className="card-accent text-center">
-            <div className="text-4xl mb-3 text-forest">🎯</div>
+            <div className="text-4xl mb-3 text-forest">Mission</div>
             <h2 className="text-xl font-semibold text-charcoal">Mission</h2>
             <p className="text-charcoal text-center mt-3">
               To equalize access to opportunities, build capacity, and foster inclusive development through mentorship,
@@ -28,7 +28,7 @@ export default function AboutPage() {
           </div>
           
           <div className="card-accent text-center">
-            <div className="text-4xl mb-3 text-forest">💎</div>
+            <div className="text-4xl mb-3 text-forest">Values</div>
             <h2 className="text-xl font-semibold text-charcoal">Values</h2>
             <p className="text-charcoal text-center mt-3">
               Integrity, innovation, community partnership, sustainability, and youth empowerment guide everything we do.
@@ -36,7 +36,7 @@ export default function AboutPage() {
           </div>
           
           <div className="card-accent text-center">
-            <div className="text-4xl mb-3 text-forest">🌟</div>
+            <div className="text-4xl mb-3 text-forest">Vision</div>
             <h2 className="text-xl font-semibold text-charcoal">Vision</h2>
             <p className="text-charcoal text-center mt-3">
               A Cameroon where every community has access to sustainable energy, quality education, and climate resilience.

@@ -47,22 +47,18 @@ export default function CareersPage() {
 
   const benefits = [
     {
-      icon: "🌍",
       title: "Meaningful Impact",
       description: "Work directly with communities to create sustainable change across Cameroon."
     },
     {
-      icon: "🚀",
       title: "Professional Growth",
       description: "Access to training, mentorship, and international networking opportunities."
     },
     {
-      icon: "🤝",
       title: "Collaborative Culture",
       description: "Join a diverse team passionate about community development and innovation."
     },
     {
-      icon: "💡",
       title: "Innovation Focus",
       description: "Work on cutting-edge solutions in clean energy and sustainable development."
     }
@@ -86,7 +82,7 @@ export default function CareersPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="card text-center">
-                <div className="text-4xl text-forest mb-4">{benefit.icon}</div>
+                <div className="text-4xl text-forest mb-4">{benefit.title}</div>
                 <h3 className="text-lg font-semibold text-charcoal mb-2">{benefit.title}</h3>
                 <p className="text-charcoal text-sm">{benefit.description}</p>
               </div>
