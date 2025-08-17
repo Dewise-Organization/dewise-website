@@ -219,9 +219,10 @@ export const site = {
           "Sole Dartmouth recipient of Davis Foundation's Projects for Peace award",
           "Selected from 125 U.S.-funded projects nationwide",
           "Summer 2025 expansion planned for crisis-affected regions",
-          "International recognition for innovative community energy solutions"
+          "International recognition for innovative community energy solutions",
+          "Youth training and entrepreneurship model for sustainable impact"
         ],
-        innovation: "WiseBox represents a breakthrough in deploying solar-powered mobile learning devices to students in remote, rural, and crisis-affected Anglophone regions of Cameroon, directly combating educational disruption through clean energy access."
+        innovation: "WiseBox represents a breakthrough in deploying solar-powered mobile learning devices to students in remote, rural, and crisis-affected Anglophone regions of Cameroon, directly combating educational disruption through clean energy access. The project's unique youth training and entrepreneurship model ensures sustainable scaling and local capacity building."
       },
       // New addition: Project context and numerics
       context: {
@@ -232,10 +233,43 @@ export const site = {
           "95% - Households still relying on wood for cooking",
           "580,000+ - People affected by Anglophone Crisis",
           "40% - Average family income spent on energy costs",
-          "60% - Reduction in energy costs achieved with WiseBox"
+          "60% - Reduction in energy costs achieved with WiseBox",
+          "100 - Youths trained as WiseBox engineers",
+          "1000+ - Total WiseBoxes deployed through youth entrepreneurship"
         ],
-        crisisImpact: "Educational disruption affecting 488,656 children in conflict-affected regions, with 2,066 schools remaining non-operational due to lack of reliable power infrastructure."
-      }
+        crisisImpact: "Educational disruption affecting 488,656 children in conflict-affected regions, with 2,066 schools remaining non-operational due to lack of reliable power infrastructure. WiseBox addresses this through youth training and local entrepreneurship."
+      },
+      // New addition: Youth training and entrepreneurship program
+      youthTraining: {
+        title: "Youth Training and Entrepreneurship Program",
+        description: "WiseBox has trained 100 youths across both English and French parts of Cameroon, providing comprehensive education in solar technology, leadership, climate justice, and clean energy principles.",
+        achievements: [
+          "100 youths trained in WiseBox construction and maintenance",
+          "Leadership and climate justice summer certifications",
+          "Clean energy technology and entrepreneurship skills",
+          "Income generation model: each youth builds 9 boxes for sale",
+          "Local community outreach and distribution networks"
+        ],
+        scale: "The training program has created a sustainable ecosystem where trained youths generate income by building and selling WiseBoxes to their communities, resulting in 1000+ total boxes deployed across Cameroon."
+      },
+      // New addition: WiseBox project photos
+      photos: [
+        {
+          src: getImagePath('/images/wisebox-youth-training-circle.jpg'),
+          alt: 'About 30 youths in circle with Blaise in the middle all wearing building worker green aprons as they participate in building WiseBoxes',
+          caption: 'Youth Training Circle: 100 youths trained across Cameroon in WiseBox construction'
+        },
+        {
+          src: getImagePath('/images/wisebox-blaise-youth-holding-boxes.jpg'),
+          alt: 'Blaise and one of the trained youths holding two WiseBoxes',
+          caption: 'Blaise with trained youth demonstrating completed WiseBoxes'
+        },
+        {
+          src: getImagePath('/images/wisebox-youths-excited-making-boxes.jpg'),
+          alt: 'Youths posing excitedly for photos as they make WiseBoxes',
+          caption: 'Youths excitedly building WiseBoxes during training program'
+        }
+      ]
     },
     {
       slug: 'solar-bright-minds',

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { ImageWithFallback } from '@/components/ImageWithFallback'
 import { site } from '@/lib/siteData'
 import Link from 'next/link'
 
@@ -53,6 +54,54 @@ export default function ProjectDetailPage({ params }: Props) {
                 <h4 className="font-semibold text-red-700 mb-3">Crisis Impact</h4>
                 <p className="text-gray-700 text-sm">{project.context.crisisImpact}</p>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* New Section: Youth Training and Entrepreneurship */}
+        {project.youthTraining && (
+          <div className="mt-12 bg-emerald-50 p-8 rounded-lg">
+            <h3 className="text-xl font-semibold text-emerald-800 mb-4">{project.youthTraining.title}</h3>
+            <p className="text-gray-700 mb-6">{project.youthTraining.description}</p>
+            
+            <div className="grid gap-6 md:grid-cols-2">
+              <div>
+                <h4 className="font-semibold text-emerald-700 mb-3">Training Achievements</h4>
+                <div className="space-y-2">
+                  {project.youthTraining.achievements.map((achievement, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="text-emerald-500 text-lg">✓</div>
+                      <span className="text-gray-700 text-sm">{achievement}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h4 className="font-semibold text-emerald-700 mb-3">Scale and Impact</h4>
+                <p className="text-gray-700 text-sm">{project.youthTraining.scale}</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* New Section: Project Photos */}
+        {project.photos && (
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold mb-6">Project in Action</h3>
+            <div className="grid gap-6 md:grid-cols-3">
+              {project.photos.map((photo, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                  <ImageWithFallback 
+                    src={photo.src} 
+                    alt={photo.alt} 
+                    fallback="📸"
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-700 font-medium">{photo.caption}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}
