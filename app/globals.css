@@ -7,12 +7,12 @@
   @apply mx-auto max-w-7xl px-6;
 }
 
-/* Logo sizing - large but not breaking layout */
+/* Logo sizing - reduced to 2/3 of previous size */
 .dewise-logo {
-  width: clamp(80px, 12vw, 160px);
-  height: clamp(80px, 12vw, 160px);
-  min-width: clamp(80px, 12vw, 160px);
-  min-height: clamp(80px, 12vw, 160px);
+  width: clamp(60px, 8vw, 120px);
+  height: clamp(60px, 8vw, 120px);
+  min-width: clamp(60px, 8vw, 120px);
+  min-height: clamp(60px, 8vw, 120px);
   flex-shrink: 0;
 }
 
@@ -90,28 +90,28 @@
   }
   
   .dewise-logo {
-    width: clamp(80px, 15vw, 120px);
-    height: clamp(80px, 15vw, 120px);
-    min-width: clamp(80px, 15vw, 120px);
-    min-height: clamp(80px, 15vw, 120px);
+    width: clamp(60px, 10vw, 80px);
+    height: clamp(60px, 10vw, 80px);
+    min-width: clamp(60px, 10vw, 80px);
+    min-height: clamp(60px, 10vw, 80px);
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .dewise-logo {
-    width: clamp(100px, 12vw, 140px);
-    height: clamp(100px, 12vw, 140px);
-    min-width: clamp(100px, 12vw, 140px);
-    min-height: clamp(100px, 12vw, 140px);
+    width: clamp(80px, 8vw, 100px);
+    height: clamp(80px, 8vw, 100px);
+    min-width: clamp(80px, 8vw, 100px);
+    min-height: clamp(80px, 8vw, 100px);
   }
 }
 
 @media (min-width: 1025px) {
   .dewise-logo {
-    width: clamp(120px, 12vw, 160px);
-    height: clamp(120px, 12vw, 160px);
-    min-width: clamp(120px, 12vw, 160px);
-    min-height: clamp(120px, 12vw, 160px);
+    width: clamp(100px, 8vw, 120px);
+    height: clamp(100px, 8vw, 120px);
+    min-width: clamp(100px, 8vw, 120px);
+    min-height: clamp(100px, 8vw, 120px);
   }
 }
 

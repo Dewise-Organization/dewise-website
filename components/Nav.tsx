@@ -32,7 +32,6 @@ export function Nav() {
             <Link href="/blog" className="hover:text-sky-700">Blog</Link>
             <Link href="/news" className="hover:text-sky-700">News</Link>
             <Link href="/team" className="hover:text-sky-700">Team</Link>
-            <Link href="/partners" className="hover:text-sky-700">Partners</Link>
             <Link href="/contact" className="hover:text-sky-700">Contact</Link>
             <LanguageSwitcher />
           </nav>
