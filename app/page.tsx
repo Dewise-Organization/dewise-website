@@ -150,6 +150,53 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Section: Real Project Images */}
+      <section className="bg-emerald-50">
+        <div className="mx-auto max-w-7xl px-6 py-14">
+          <h2 className="text-2xl font-semibold text-center mb-12">Our Work in Action</h2>
+          
+          {/* SunSpark Project Images */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-emerald-800 mb-6">SunSpark Energy Accelerator</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              {site.projectImages.sunspark.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                  <ImageWithFallback 
+                    src={image.src} 
+                    alt={image.alt} 
+                    fallback="🌱"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-600">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Fellowship Team Images */}
+          <div>
+            <h3 className="text-xl font-semibold text-emerald-800 mb-6">Energy Transition Fellowship 2024</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              {site.projectImages.fellowship.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm">
+                  <ImageWithFallback 
+                    src={image.src} 
+                    alt={image.alt} 
+                    fallback="🌟"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-600">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup */}
       <section className="bg-gray-50">
         <div className="mx-auto max-w-7xl px-6 py-14">

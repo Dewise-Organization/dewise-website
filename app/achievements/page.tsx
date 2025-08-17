@@ -1,5 +1,6 @@
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { ImageWithFallback } from '@/components/ImageWithFallback'
 import { site } from '@/lib/siteData'
 
 export default function AchievementsPage() {
@@ -177,6 +178,71 @@ export default function AchievementsPage() {
             >
               Get Involved
             </a>
+          </div>
+        </div>
+
+        {/* New Section: Recognition Certificates and Photos */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-semibold mb-6">Recognition & Certificates</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {site.recognition.certificates.map((certificate, index) => (
+              <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                <ImageWithFallback 
+                  src={certificate.src} 
+                  alt={certificate.alt} 
+                  fallback="🏆"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <p className="text-sm text-gray-700 font-medium">{certificate.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* New Section: Project Work in Action */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-semibold mb-6">Our Work in Action</h2>
+          
+          {/* SunSpark Project */}
+          <div className="mb-12">
+            <h3 className="text-xl font-semibold text-emerald-700 mb-6">SunSpark Energy Accelerator</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              {site.projectImages.sunspark.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                  <ImageWithFallback 
+                    src={image.src} 
+                    alt={image.alt} 
+                    fallback="🌱"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-700">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Fellowship Program */}
+          <div>
+            <h3 className="text-xl font-semibold text-emerald-700 mb-6">Energy Transition Fellowship</h3>
+            <div className="grid gap-6 md:grid-cols-2">
+              {site.projectImages.fellowship.map((image, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                  <ImageWithFallback 
+                    src={image.src} 
+                    alt={image.alt} 
+                    fallback="🌟"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-4">
+                    <p className="text-sm text-gray-700">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

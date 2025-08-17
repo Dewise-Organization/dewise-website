@@ -255,7 +255,7 @@ export const site = {
     },
     { 
       name: 'Mboa Hub',
-      logo: getImagePath('/images/mbua-hub-certificate.jpg'),
+      logo: getImagePath('/images/mbua-hub-logo.png'),
       website: 'https://planetone.org/city_page/yaounde/',
       description: 'Youth Climate Justice Makerspace powered by Greenpeace Africa and Fryshuset',
       // Revolutionary addition: Global network connection
@@ -418,6 +418,43 @@ export const site = {
       impact: "1,000+ patients served"
     }
   ],
+  // New addition: Project and activity images
+  projectImages: {
+    sunspark: [
+      {
+        src: getImagePath('/images/dewise-mbua-sunspark-project-team.jpg'),
+        alt: 'Dewise and Mboa Hub team working on SunSpark project',
+        caption: 'Team collaboration on SunSpark energy accelerator'
+      },
+      {
+        src: getImagePath('/images/dewise-mbua-sunspark-project-2.jpg'),
+        alt: 'SunSpark project implementation progress',
+        caption: 'SunSpark project development and implementation'
+      }
+    ],
+    fellowship: [
+      {
+        src: getImagePath('/images/dewise-fellowship-team-2024.jpg'),
+        alt: 'Dewise December 2024 energy transition fellowship team',
+        caption: 'Energy Transition Fellowship Team 2024'
+      },
+      {
+        src: getImagePath('/images/christian-fellowship-presentation.jpg'),
+        alt: 'Country Director Christian presenting Dewise Foundation and offering grants',
+        caption: 'Fellowship grant presentation and community engagement'
+      }
+    ]
+  },
+  // New addition: Recognition and certificates
+  recognition: {
+    certificates: [
+      {
+        src: getImagePath('/images/ceo-blaise-christian-certificate.jpg'),
+        alt: 'CEO Blaise and Country Director Christian receiving Mboa Hub certificate',
+        caption: 'Recognition for active participation in climate justice'
+      }
+    ]
+  },
   // Revolutionary addition: Crisis response metrics
   crisisResponse: {
     title: "Humanitarian Crisis Response",
