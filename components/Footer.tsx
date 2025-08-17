@@ -7,7 +7,10 @@ export function Footer() {
       <div className="container py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <div className="text-lg font-semibold text-sky-700">Dewise Foundation</div>
+            <div className="flex items-center gap-3 mb-3">
+              <img src="/images/dewise_logo.jpg" alt="Dewise Foundation" className="w-10 h-10 rounded-full" />
+              <div className="text-lg font-semibold text-sky-700">Dewise Foundation</div>
+            </div>
             <p className="mt-2 text-sm text-gray-600">
               Empowering underserved communities through education, clean energy, and climate action.
             </p>

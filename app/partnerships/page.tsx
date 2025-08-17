@@ -43,11 +43,15 @@ export default function PartnershipsPage() {
             <div className="grid gap-8 md:grid-cols-2">
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📱</span>
-                  </div>
+                  <a href={site.partners[0].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center hover:bg-yellow-200 transition-colors">
+                    <img src={site.partners[0].logo} alt={site.partners[0].name} className="w-12 h-12 object-contain" />
+                  </a>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{site.partners[0].name}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      <a href={site.partners[0].website} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-600 transition-colors">
+                        {site.partners[0].name}
+                      </a>
+                    </h3>
                     <p className="text-sm text-gray-600">{site.partners[0].description}</p>
                   </div>
                 </div>
@@ -76,11 +80,15 @@ export default function PartnershipsPage() {
               </div>
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🌱</span>
-                  </div>
+                  <a href={site.partners[1].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center hover:bg-green-200 transition-colors">
+                    <img src={site.partners[1].logo} alt={site.partners[1].name} className="w-12 h-12 object-contain rounded-full" />
+                  </a>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{site.partners[1].name}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      <a href={site.partners[1].website} target="_blank" rel="noopener noreferrer" className="hover:text-green-600 transition-colors">
+                        {site.partners[1].name}
+                      </a>
+                    </h3>
                     <p className="text-sm text-gray-600">{site.partners[1].description}</p>
                   </div>
                 </div>
@@ -103,11 +111,15 @@ export default function PartnershipsPage() {
             <div className="grid gap-8 md:grid-cols-2">
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎓</span>
-                  </div>
+                  <a href={site.partners[2].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
+                    <img src={site.partners[2].logo} alt={site.partners[2].name} className="w-12 h-12 object-contain" />
+                  </a>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{site.partners[2].name}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      <a href={site.partners[2].website} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">
+                        {site.partners[2].name}
+                      </a>
+                    </h3>
                     <p className="text-sm text-gray-600">{site.partners[2].description}</p>
                   </div>
                 </div>
@@ -136,11 +148,15 @@ export default function PartnershipsPage() {
               </div>
               <div>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🚀</span>
-                  </div>
+                  <a href={site.partners[3].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center hover:bg-purple-200 transition-colors">
+                    <img src={site.partners[3].logo} alt={site.partners[3].name} className="w-12 h-12 object-contain" />
+                  </a>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{site.partners[3].name}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      <a href={site.partners[3].website} target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 transition-colors">
+                        {site.partners[3].name}
+                      </a>
+                    </h3>
                     <p className="text-sm text-gray-600">{site.partners[3].description}</p>
                   </div>
                 </div>

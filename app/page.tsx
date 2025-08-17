@@ -122,13 +122,14 @@ export default function HomePage() {
         <div className="mt-6 grid grid-cols-2 items-center gap-8 sm:grid-cols-3 md:grid-cols-4">
           {site.partners.map((partner) => (
             <div key={partner.name} className="text-center">
-              <div className="w-16 h-16 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center text-gray-400">
-                {partner.logo ? (
-                  <img src={partner.logo} alt={partner.name} className="w-12 h-12 object-contain" />
-                ) : (
-                  <span className="text-2xl">🏢</span>
-                )}
-              </div>
+              <a 
+                href={partner.website} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block w-20 h-20 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+              >
+                <img src={partner.logo} alt={partner.name} className="w-16 h-16 object-contain" />
+              </a>
               <div className="text-sm font-medium text-gray-700">{partner.name}</div>
               <div className="text-xs text-gray-500 mt-1">{partner.description}</div>
             </div>

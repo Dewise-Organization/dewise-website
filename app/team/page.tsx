@@ -17,10 +17,10 @@ export default function TeamPage() {
           {site.team.map((m) => (
             <div key={m.name} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-center">
-                {/* Team member photo placeholder */}
-                <div className="w-24 h-24 mx-auto mb-4 bg-sky-100 rounded-full flex items-center justify-center">
+                {/* Team member photo */}
+                <div className="w-24 h-24 mx-auto mb-4 bg-sky-100 rounded-full flex items-center justify-center overflow-hidden">
                   {m.image ? (
-                    <img src={m.image} alt={m.name} className="w-20 h-20 rounded-full object-cover" />
+                    <img src={m.image} alt={m.name} className="w-24 h-24 rounded-full object-cover" />
                   ) : (
                     <span className="text-3xl text-sky-600">👤</span>
                   )}

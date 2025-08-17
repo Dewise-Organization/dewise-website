@@ -241,28 +241,32 @@ export const site = {
   partners: [
     { 
       name: 'MTN Cameroon',
-      logo: '/images/mtn-logo.png',
+      logo: '/images/mtn cameroon.png',
+      website: 'https://mtn.cm/',
       description: 'Telecommunications partner supporting digital inclusion',
       // Revolutionary addition: Competition partnership
       partnership: "Host of PachiPanda Challenge 2024 where WiseCool secured 3rd place, advancing to continental competition"
     },
     { 
       name: 'Mboa Hub',
-      logo: '/images/mbua-logo.png',
+      logo: '/images/Mbua Hub Certificate of Appreciation to Dewise Foundation for active participation in climate justice.jpg',
+      website: 'https://planetone.org/city_page/yaounde/',
       description: 'Youth Climate Justice Makerspace powered by Greenpeace Africa and Fryshuset',
       // Revolutionary addition: Global network connection
       partnership: "Connected to Planet One global network operating makerspaces across six countries. Launched DeWise-Mboa SunSpark Energy Accelerator Program training 20 youth annually"
     },
     { 
       name: 'Open Dreams',
-      logo: '/images/opendreams-logo.png',
+      logo: '/images/open_dreams_logo.jpg',
+      website: 'https://www.open-dreams.org/',
       description: 'Educational access and scholarship organization',
       // Revolutionary addition: Scholarship achievements
       partnership: "Supported over 200 scholars in accessing international scholarships, with operational centers in Bamenda and Yaoundé. 3-month Summer Academy provides comprehensive college preparation"
     },
     { 
       name: 'TiC Foundation',
-      logo: '/images/tic-logo.png',
+      logo: '/images/TiC.jpg',
+      website: 'https://www.linkedin.com/company/tic-foundation/posts/?feedView=all',
       description: 'Technology and innovation conference platform',
       // Revolutionary addition: Innovation ecosystem
       partnership: "Three flagship programs: TiC Startup Accelerator, TiC Summit (national innovation competition), and TiC Bootcamp. Supported over 100 startups and registered more than 20 companies"
@@ -273,7 +277,7 @@ export const site = {
       role: 'Cofounder & CEO', 
       name: 'Seka Jean Blaise Tarnyu',
       bio: 'Passionate about community development and youth empowerment, leading strategic initiatives across Cameroon.',
-      image: '/images/team/seka.jpg',
+      image: '/images/Seka Blaise profile pic.png',
       // Revolutionary addition: International recognition
       achievements: [
         "IRENA Youth Ambassador representing Cameroon in global renewable energy initiatives",
@@ -288,7 +292,7 @@ export const site = {
       role: 'Cofounder & Head of Technology', 
       name: 'Triumph Kia Teh',
       bio: 'Technology innovator focused on sustainable solutions and digital transformation for underserved communities.',
-      image: '/images/team/triumph.jpg',
+      image: '/images/Triumph dewise profile pic.jpg',
       // Revolutionary addition: Academic excellence
       achievements: [
         "Dartmouth College student (Class of 2026) studying Biomedical Engineering and Neuroscience",
@@ -301,14 +305,14 @@ export const site = {
       role: 'Country Director', 
       name: 'Awantu Christian Funwi',
       bio: 'Experienced leader managing operations and partnerships to maximize impact across all programs.',
-      image: '/images/team/awantu.jpg',
+      image: '/images/Awantu Christian profile pic.jpg',
       credentials: "Experienced leader managing operations and partnerships to maximize impact across all programs"
     },
     { 
       role: 'Design & Marketing Lead', 
       name: 'Makoubo Krystie',
       bio: 'Creative professional crafting compelling narratives and visual identity to amplify our mission.',
-      image: '/images/team/krystie.jpg',
+      image: '/images/Makoubo Krystie profile pic.png',
       // Revolutionary addition: Scholar recognition
       achievements: [
         "Open Dreams Scholar of the Month recognition",
@@ -322,14 +326,14 @@ export const site = {
       role: 'CPO', 
       name: 'Koumayeb Anushka',
       bio: 'Product strategist ensuring our solutions meet real community needs and deliver measurable impact.',
-      image: '/images/team/anushka.jpg',
+      image: '/images/Koumayeb Anushka profile pic.jpg',
       credentials: "Product strategist ensuring our solutions meet real community needs and deliver measurable impact"
     },
     { 
       role: 'Product Design & Development Lead', 
       name: 'Engineer N. Desmond',
       bio: 'Technical expert developing innovative solutions for clean energy and community development challenges.',
-      image: '/images/team/desmond.jpg',
+      image: '/images/Engineer N. Desmond profile pic.jpg',
       credentials: "Technical expert developing innovative solutions for clean energy and community development challenges"
     }
   ],

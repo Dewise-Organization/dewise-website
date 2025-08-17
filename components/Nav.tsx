@@ -5,7 +5,8 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="text-lg font-semibold text-sky-700">
+        <Link href="/" className="flex items-center gap-3 text-lg font-semibold text-sky-700">
+          <img src="/images/dewise_logo.jpg" alt="Dewise Foundation" className="w-8 h-8 rounded-full" />
           Dewise Foundation
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-6 sm:flex">
