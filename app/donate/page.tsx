@@ -7,47 +7,46 @@ export default function DonatePage() {
   return (
     <main>
       <Nav />
-      <section className="container py-12">
-        <h1 className="text-3xl font-bold">Support Our Mission</h1>
-        <p className="mt-3 max-w-3xl text-gray-700">
-          Your contribution powers education access, clean energy installations, and climate action across communities in
-          Cameroon.
-        </p>
+      <section className="container-max section-padding">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl font-bold text-charcoal">Support Our Mission</h1>
+          <p className="mt-3 max-w-3xl text-lg text-charcoal mx-auto">
+            Your contribution powers education access, clean energy installations, and climate action across communities in
+            Cameroon.
+          </p>
+        </div>
 
         {/* Donation Tiers */}
-        <div className="mt-12">
-          <h2 className="text-2xl font-semibold mb-6">Choose Your Impact</h2>
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Choose Your Impact</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {site.donationTiers.map((tier, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-sky-600">${tier.amount}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-2">{tier.title}</h3>
-                  <p className="text-gray-600 text-sm mt-2">{tier.description}</p>
-                  <div className="mt-4 p-3 bg-emerald-50 rounded-md">
-                    <div className="text-sm font-medium text-emerald-700">{tier.impact}</div>
-                  </div>
-                  <button className="mt-4 w-full rounded-md bg-primary px-4 py-2 text-white hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
-                    Donate ${tier.amount}
-                  </button>
+              <div key={index} className="card-accent text-center">
+                <div className="text-3xl font-bold text-gold mb-2">${tier.amount}</div>
+                <h3 className="text-lg font-semibold text-charcoal mb-2">{tier.title}</h3>
+                <p className="text-charcoal text-sm mb-4">{tier.description}</p>
+                <div className="mb-4 p-3 bg-cream rounded-md border border-gold">
+                  <div className="text-sm font-medium text-forest">{tier.impact}</div>
                 </div>
+                <button className="btn-primary w-full">
+                  Donate ${tier.amount}
+                </button>
               </div>
             ))}
           </div>
         </div>
 
         {/* Custom Amount */}
-        <div className="mt-12 text-center">
-          <h3 className="text-xl font-semibold mb-4">Or Choose Your Own Amount</h3>
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Custom Amount</h2>
           <div className="max-w-md mx-auto">
             <div className="flex gap-3">
               <input 
                 type="number" 
                 placeholder="Enter amount" 
-                className="flex-1 rounded-md border border-gray-300 px-4 py-2 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                min="1"
+                className="flex-1 rounded-lg border border-sand px-4 py-3 focus:border-sky focus:outline-none focus:ring-2 focus:ring-blue-500 text-charcoal"
               />
-              <button className="rounded-md bg-primary px-6 py-2 text-white hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+              <button className="btn-primary">
                 Donate
               </button>
             </div>
@@ -55,57 +54,83 @@ export default function DonatePage() {
         </div>
 
         {/* Alternative Support Options */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-3">Bank Transfer</h3>
-            <p className="text-gray-600 mb-4">Prefer to make a direct bank transfer? Contact us for our banking details.</p>
-            <Link href="mailto:infodewise@gmail.com" className="text-sky-600 hover:text-sky-700 font-medium">
-              Get Banking Details →
-            </Link>
-          </div>
-          
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-3">In-Kind Support</h3>
-            <p className="text-gray-600 mb-4">Have equipment, materials, or expertise to share? We'd love to discuss partnership opportunities.</p>
-            <Link href="/contact" className="text-sky-600 hover:text-sky-700 font-medium">
-              Discuss Partnership →
-            </Link>
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Other Ways to Support</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="card text-center">
+              <div className="text-4xl text-forest mb-4">🏦</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Bank Transfer</h3>
+              <p className="text-charcoal text-sm mb-4">Direct bank transfer to our foundation account</p>
+              <button className="btn-secondary w-full">Get Details</button>
+            </div>
+            
+            <div className="card text-center">
+              <div className="text-4xl text-forest mb-4">📦</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">In-Kind Support</h3>
+              <p className="text-charcoal text-sm mb-4">Donate equipment, materials, or services</p>
+              <button className="btn-secondary w-full">Learn More</button>
+            </div>
+            
+            <div className="card text-center">
+              <div className="text-4xl text-forest mb-4">🤝</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Volunteer</h3>
+              <p className="text-charcoal text-sm mb-4">Share your time and expertise with us</p>
+              <button className="btn-secondary w-full">Get Involved</button>
+            </div>
           </div>
         </div>
 
-        {/* Impact Stories */}
-        <div className="mt-16">
-          <h2 className="text-2xl font-semibold mb-8">Your Donations in Action</h2>
+        {/* Your Donations in Action */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Your Donations in Action</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {site.testimonials.slice(0, 3).map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                <div className="text-gray-600 italic mb-4">"{testimonial.quote}"</div>
-                <div className="text-sm font-medium text-gray-900">{testimonial.author}</div>
-                <div className="text-xs text-gray-500">{testimonial.location}</div>
+              <div key={index} className="card">
+                <div className="text-charcoal italic mb-4">"{testimonial.quote}"</div>
+                <div className="text-sm font-medium text-charcoal">{testimonial.author}</div>
+                <div className="text-xs text-charcoal">{testimonial.location}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 text-center bg-sky-50 p-8 rounded-lg">
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">Your Trust Matters</h3>
-          <p className="text-gray-600 mb-6">
-            We are committed to transparency and accountability. 100% of your donation goes directly to our programs.
+        {/* Your Trust Matters */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-semibold text-charcoal mb-6 text-center">Your Trust Matters</h2>
+          <div className="bg-gradient-to-r from-sand to-cream p-8 rounded-lg border-2 border-gold">
+            <div className="grid gap-6 md:grid-cols-3 text-center">
+              <div>
+                <div className="text-3xl text-gold mb-2">🔒</div>
+                <h3 className="font-semibold text-charcoal mb-2">Secure Donations</h3>
+                <p className="text-sm text-charcoal">All transactions are encrypted and secure</p>
+              </div>
+              <div>
+                <div className="text-3xl text-gold mb-2">📊</div>
+                <h3 className="font-semibold text-charcoal mb-2">Transparency</h3>
+                <p className="text-sm text-charcoal">Regular reports on how your donations are used</p>
+              </div>
+              <div>
+                <div className="text-3xl text-gold mb-2">🎯</div>
+                <h3 className="font-semibold text-charcoal mb-2">Direct Impact</h3>
+                <p className="text-sm text-charcoal">100% of donations go directly to programs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center bg-sand p-8 rounded-lg border-2 border-gold">
+          <h3 className="text-xl font-semibold text-charcoal mb-3">Ready to Make a Difference?</h3>
+          <p className="text-charcoal mb-6">
+            Every donation, no matter the size, helps us empower communities across Cameroon.
           </p>
-          <div className="grid gap-6 sm:grid-cols-3 max-w-2xl mx-auto">
-            <div>
-              <div className="text-2xl font-bold text-sky-600">100%</div>
-              <div className="text-sm text-gray-600">Goes to Programs</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-sky-600">500+</div>
-              <div className="text-sm text-gray-600">Lives Impacted</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold text-sky-600">20+</div>
-              <div className="text-sm text-gray-600">Communities Served</div>
-            </div>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <button className="btn-primary">
+              Donate Now
+            </button>
+            <Link href="/contact" className="btn-secondary">
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
