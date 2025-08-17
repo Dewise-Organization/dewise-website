@@ -11,15 +11,15 @@ const getImagePath = (path: string) => {
 export function Nav() {
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 text-xl font-semibold text-sky-700">
+      <div className="container flex h-32 items-center justify-between">
+        <Link href="/" className="logo-container text-xl font-semibold text-sky-700">
           <ImageWithFallback
             src={getImagePath('/images/dewise-logo.jpg')}
             alt="Dewise Foundation"
             fallback="🏢"
-            className="w-16 h-16 rounded-full shadow-sm"
+            className="dewise-logo rounded-full shadow-lg border-4 border-sky-100"
           />
-          <span className="text-2xl font-bold">Dewise Foundation</span>
+          <span className="text-3xl font-bold">Dewise Foundation</span>
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-6 sm:flex">
           <Link href="/about" className="hover:text-sky-700">About</Link>

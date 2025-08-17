@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS for Dewise logo to ensure maximum size */
+.dewise-logo {
+  width: 200px !important;
+  height: 200px !important;
+  min-width: 200px !important;
+  min-height: 200px !important;
+  max-width: none !important;
+  max-height: none !important;
+  flex-shrink: 0 !important;
+}
+
+.dewise-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Ensure logo container can accommodate large sizes */
+.logo-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+  flex-shrink: 0 !important;
+}
+
 html { scroll-behavior: smooth; }
 
 .container { @apply mx-auto max-w-7xl px-6; }

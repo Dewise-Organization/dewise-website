@@ -14,14 +14,14 @@ export function Footer() {
       <div className="container py-10">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-4 mb-4">
+            <div className="logo-container mb-6">
               <ImageWithFallback
                 src={getImagePath('/images/dewise-logo.jpg')}
                 alt="Dewise Foundation"
                 fallback="🏢"
-                className="w-20 h-20 rounded-full shadow-sm"
+                className="dewise-logo rounded-full shadow-lg border-4 border-sky-100"
               />
-              <div className="text-2xl font-bold text-sky-700">Dewise Foundation</div>
+              <div className="text-3xl font-bold text-sky-700">Dewise Foundation</div>
             </div>
             <p className="mt-2 text-sm text-gray-600">
               Empowering underserved communities through education, clean energy, and climate action.
