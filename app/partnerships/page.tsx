@@ -1,5 +1,6 @@
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { ImageWithFallback } from '@/components/ImageWithFallback'
 import { site } from '@/lib/siteData'
 
 export default function PartnershipsPage() {
@@ -44,7 +45,12 @@ export default function PartnershipsPage() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <a href={site.partners[0].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center hover:bg-yellow-200 transition-colors">
-                    <img src={site.partners[0].logo} alt={site.partners[0].name} className="w-12 h-12 object-contain" />
+                    <ImageWithFallback 
+                      src={site.partners[0].logo} 
+                      alt={site.partners[0].name} 
+                      fallback="📱"
+                      className="w-12 h-12 object-contain"
+                    />
                   </a>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">
@@ -81,7 +87,12 @@ export default function PartnershipsPage() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <a href={site.partners[1].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center hover:bg-green-200 transition-colors">
-                    <img src={site.partners[1].logo} alt={site.partners[1].name} className="w-12 h-12 object-contain rounded-full" />
+                    <ImageWithFallback 
+                      src={site.partners[1].logo} 
+                      alt={site.partners[1].name} 
+                      fallback="🌱"
+                      className="w-12 h-12 object-contain rounded-full"
+                    />
                   </a>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">
@@ -112,7 +123,12 @@ export default function PartnershipsPage() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <a href={site.partners[2].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors">
-                    <img src={site.partners[2].logo} alt={site.partners[2].name} className="w-12 h-12 object-contain" />
+                    <ImageWithFallback 
+                      src={site.partners[2].logo} 
+                      alt={site.partners[2].name} 
+                      fallback="🎓"
+                      className="w-12 h-12 object-contain"
+                    />
                   </a>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">
@@ -149,7 +165,12 @@ export default function PartnershipsPage() {
               <div>
                 <div className="flex items-center gap-4 mb-4">
                   <a href={site.partners[3].website} target="_blank" rel="noopener noreferrer" className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center hover:bg-purple-200 transition-colors">
-                    <img src={site.partners[3].logo} alt={site.partners[3].name} className="w-12 h-12 object-contain" />
+                    <ImageWithFallback 
+                      src={site.partners[3].logo} 
+                      alt={site.partners[3].name} 
+                      fallback="🚀"
+                      className="w-12 h-12 object-contain"
+                    />
                   </a>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900">

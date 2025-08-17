@@ -3,6 +3,7 @@ import { site } from '@/lib/siteData'
 import { Gallery } from '@/components/Gallery'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { ImageWithFallback } from '@/components/ImageWithFallback'
 
 export default function HomePage() {
   return (
@@ -128,7 +129,12 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="block w-20 h-20 mx-auto mb-3 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
               >
-                <img src={partner.logo} alt={partner.name} className="w-16 h-16 object-contain" />
+                <ImageWithFallback 
+                  src={partner.logo} 
+                  alt={partner.name} 
+                  fallback="🏢"
+                  className="w-16 h-16 object-contain"
+                />
               </a>
               <div className="text-sm font-medium text-gray-700">{partner.name}</div>
               <div className="text-xs text-gray-500 mt-1">{partner.description}</div>
@@ -156,7 +162,7 @@ export default function HomePage() {
                 placeholder="Enter your email" 
                 className="flex-1 rounded-md border border-gray-300 px-4 py-2 focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
               />
-              <button className="rounded-md bg-primary px-4 py-2 text-white hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+              <button className="rounded-md bg-primary px-4 py-3 text-white hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
                 Subscribe
               </button>
             </div>

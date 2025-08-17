@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { site } from '@/lib/siteData'
+import { ImageWithFallback } from './ImageWithFallback'
 
 export function Footer() {
   return (
@@ -8,7 +9,12 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-3">
-              <img src="/images/dewise_logo.jpg" alt="Dewise Foundation" className="w-10 h-10 rounded-full" />
+              <ImageWithFallback 
+                src="/images/dewise_logo.jpg" 
+                alt="Dewise Foundation" 
+                fallback="🏢"
+                className="w-10 h-10 rounded-full"
+              />
               <div className="text-lg font-semibold text-sky-700">Dewise Foundation</div>
             </div>
             <p className="mt-2 text-sm text-gray-600">
