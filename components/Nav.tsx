@@ -11,19 +11,19 @@ const getImagePath = (path: string) => {
 export function Nav() {
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="dynamic-container">
-        <div className="dynamic-header">
-          <Link href="/" className="dynamic-logo-container">
+      <div className="container">
+        <div className="professional-header">
+          <Link href="/" className="logo-container">
             <ImageWithFallback
               src={getImagePath('/images/dewise-logo.jpg')}
               alt="Dewise Foundation"
               fallback="🏢"
-              className="dynamic-logo shadow-lg border-2 border-sky-100"
+              className="dewise-logo rounded-full shadow-lg border-2 border-sky-100"
             />
-            <span className="dynamic-text-large font-bold text-sky-700">Dewise Foundation</span>
+            <span className="responsive-text font-bold text-sky-700">Dewise Foundation</span>
           </Link>
           
-          <nav className="dynamic-nav">
+          <nav className="professional-nav">
             <Link href="/about" className="hover:text-sky-700">About</Link>
             <Link href="/programs" className="hover:text-sky-700">Programs</Link>
             <Link href="/projects" className="hover:text-sky-700">Projects</Link>
@@ -37,11 +37,9 @@ export function Nav() {
             <LanguageSwitcher />
           </nav>
           
-          <div className="dynamic-actions">
-            <Link href="/donate" className="dynamic-button rounded-md bg-primary text-white hover:bg-sky-600">
-              Donate
-            </Link>
-          </div>
+          <Link href="/donate" className="rounded-md bg-primary px-4 py-2 text-white hover:bg-sky-600">
+            Donate
+          </Link>
         </div>
       </div>
     </header>

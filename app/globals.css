@@ -2,164 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dynamic CSS Grid Layout System - Automatically adapts to ANY content */
-.dynamic-header {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "logo nav actions";
-  align-items: center;
-  gap: clamp(1rem, 3vw, 2rem);
-  min-height: clamp(4rem, 10vh, 8rem);
-  padding: clamp(0.5rem, 2vw, 1rem);
-  width: 100%;
+/* Professional centered layout with proper margins */
+.container {
+  @apply mx-auto max-w-7xl px-6;
 }
 
-.dynamic-logo {
-  grid-area: logo;
-  width: clamp(80px, 15vw, 200px);
-  height: clamp(80px, 15vw, 200px);
-  min-width: clamp(80px, 15vw, 200px);
-  min-height: clamp(80px, 15vw, 200px);
-  max-width: clamp(80px, 15vw, 200px);
-  max-height: clamp(80px, 15vw, 200px);
-  flex-shrink: 0;
-  aspect-ratio: 1;
-}
-
-.dynamic-nav {
-  grid-area: nav;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(0.5rem, 2vw, 1.5rem);
-  flex-wrap: wrap;
-}
-
-.dynamic-actions {
-  grid-area: actions;
-  display: flex;
-  align-items: center;
-  gap: clamp(0.5rem, 2vw, 1rem);
-}
-
-/* Dynamic logo container that adapts to content */
-.dynamic-logo-container {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.5rem, 2vw, 1.5rem);
+/* Logo sizing - large but not breaking layout */
+.dewise-logo {
+  width: clamp(80px, 12vw, 160px);
+  height: clamp(80px, 12vw, 160px);
+  min-width: clamp(80px, 12vw, 160px);
+  min-height: clamp(80px, 12vw, 160px);
   flex-shrink: 0;
 }
 
-/* Dynamic text sizing that scales with viewport */
-.dynamic-text {
-  font-size: clamp(1rem, 3vw, 2rem);
-  line-height: 1.2;
-}
-
-.dynamic-text-large {
-  font-size: clamp(1.25rem, 4vw, 2.5rem);
-  line-height: 1.1;
-}
-
-/* Dynamic spacing that adapts to viewport */
-.dynamic-spacing {
-  padding: clamp(1rem, 4vw, 3rem);
-  margin: clamp(0.5rem, 2vw, 1.5rem);
-}
-
-/* Container that automatically fits content */
-.dynamic-container {
-  width: 100%;
-  max-width: min(90vw, 1200px);
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 2rem);
-}
-
-/* Responsive grid that automatically adjusts columns */
-.dynamic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30vw, 400px), 1fr));
-  gap: clamp(1rem, 3vw, 2rem);
-  width: 100%;
-}
-
-/* Dynamic footer layout */
-.dynamic-footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 25vw, 300px), 1fr));
-  gap: clamp(1rem, 3vw, 2rem);
-  align-items: start;
-}
-
-/* Ensure images scale properly */
-.dynamic-logo img {
+.dewise-logo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
+/* Professional header layout */
+.professional-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: clamp(4rem, 8vh, 6rem);
+  padding: 1rem 0;
+  width: 100%;
+}
+
+/* Professional navigation */
+.professional-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.professional-nav a {
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Responsive text sizing */
+.responsive-text {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+/* Responsive spacing */
+.responsive-spacing {
+  padding: clamp(1rem, 4vw, 3rem);
+  margin: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* Responsive grid */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
 /* Mobile-first responsive breakpoints */
-@media (max-width: 640px) {
-  .dynamic-header {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "logo"
-      "nav"
-      "actions";
+@media (max-width: 768px) {
+  .professional-header {
+    flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
   
-  .dynamic-nav {
-    justify-content: center;
+  .professional-nav {
     flex-direction: column;
+    gap: 0.5rem;
   }
   
-  .dynamic-actions {
-    justify-content: center;
+  .dewise-logo {
+    width: clamp(80px, 15vw, 120px);
+    height: clamp(80px, 15vw, 120px);
+    min-width: clamp(80px, 15vw, 120px);
+    min-height: clamp(80px, 15vw, 120px);
   }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
-  .dynamic-header {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "logo nav actions";
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dewise-logo {
+    width: clamp(100px, 12vw, 140px);
+    height: clamp(100px, 12vw, 140px);
+    min-width: clamp(100px, 12vw, 140px);
+    min-height: clamp(100px, 12vw, 140px);
   }
 }
 
 @media (min-width: 1025px) {
-  .dynamic-header {
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "logo nav actions";
-    gap: 2rem;
+  .dewise-logo {
+    width: clamp(120px, 12vw, 160px);
+    height: clamp(120px, 12vw, 160px);
+    min-width: clamp(120px, 12vw, 160px);
+    min-height: clamp(120px, 12vw, 160px);
   }
 }
 
 /* Ensure content never overflows */
 * {
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 /* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
   width: 100%;
-}
-
-/* Dynamic button sizing */
-.dynamic-button {
-  padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
-  border-radius: clamp(0.25rem, 1vw, 0.5rem);
-}
-
-/* Dynamic navigation links */
-.dynamic-nav a {
-  font-size: clamp(0.875rem, 2.5vw, 1rem);
-  padding: clamp(0.25rem, 1vw, 0.5rem);
-  white-space: nowrap;
 }
 
 html { scroll-behavior: smooth; }
