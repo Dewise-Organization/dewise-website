@@ -358,15 +358,19 @@ export const site = {
     { 
       role: 'Cofounder & Head of Technology', 
       name: 'Triumph Kia Teh',
-      bio: 'Technology innovator focused on sustainable solutions and digital transformation for underserved communities.',
+      bio: 'Visionary technology leader combining AI research, cognitive science, and social impact to transform underserved communities through innovative solutions.',
       image: getImagePath('/images/triumph-kia-teh-profile.jpg'),
-      // Revolutionary addition: Academic excellence
+      // Revolutionary addition: Academic excellence and global impact
       achievements: [
-        "Dartmouth College student (Class of 2026) studying Biomedical Engineering and Neuroscience",
-        "Significant community health work through DESERVE organization combating HIV/AIDS in Cameroon",
-        "Over three years of community engagement experience"
+        "King Scholar at Dartmouth College (Class of 2026) - 1 of 6 global recipients of full-ride scholarship",
+        "Dual major in Computer Science and Cognitive Science with exceptional academic performance",
+        "Davis Projects for Peace Fellow (2025) - Sole Dartmouth recipient for WiseBox project",
+        "AI R&D Researcher at LTTS developing advanced AI systems with real-world impact",
+        "Pioneering AI developer for Evergreen mental health initiative serving 6,700+ students",
+        "Global health experience across 6 countries including UNAIDS, BroadReach, and MEDLIFE",
+        "Evolutionary Game Theory Prize recipient and Rufus Choate Scholar (Top 5% of Dartmouth)"
       ],
-      credentials: "Biomedical Engineering and Neuroscience student at Dartmouth College with extensive community health experience"
+      credentials: "Dartmouth College King Scholar combining AI research, cognitive science, and global health expertise to drive social innovation through technology"
     },
     { 
       role: 'Country Director', 
