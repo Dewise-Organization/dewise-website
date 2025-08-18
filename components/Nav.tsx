@@ -1,5 +1,5 @@
 "use client"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ImageWithFallback } from './ImageWithFallback'
 
@@ -12,6 +12,46 @@ const getImagePath = (path: string) => {
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null)
+
+  // Clear timeout when component unmounts
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeout) {
+        clearTimeout(dropdownTimeout)
+      }
+    }
+  }, [dropdownTimeout])
+
+  const showDropdown = (dropdown: string) => {
+    // Clear any existing timeout
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+    }
+    setActiveDropdown(dropdown)
+  }
+
+  const hideDropdown = (dropdown: string) => {
+    // Set a timeout to hide the dropdown after a delay
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 300) // 300ms delay before hiding
+    setDropdownTimeout(timeout)
+  }
+
+  const handleDropdownMouseEnter = (dropdown: string) => {
+    // Clear timeout when hovering over dropdown content
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout)
+      setDropdownTimeout(null)
+    }
+    setActiveDropdown(dropdown)
+  }
+
+  const handleDropdownMouseLeave = (dropdown: string) => {
+    // Hide dropdown after delay when leaving dropdown area
+    hideDropdown(dropdown)
+  }
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
@@ -25,9 +65,9 @@ export function Nav() {
           <Link href="/" className="flex items-center space-x-3">
             <div className="logo-container">
               <ImageWithFallback
-                src={getImagePath('/images/dewise-logo.jpg')}
+                src={getImagePath('/images/dewise_logo.jpg')}
                 alt="Dewise Foundation"
-                fallback="🏢"
+                fallback=""
                 className="dewise-logo rounded-full shadow-lg border-2 border-gold"
               />
             </div>
@@ -40,11 +80,11 @@ export function Nav() {
             </Link>
             
             {/* About Dropdown */}
-            <div className="relative group">
+            <div className="relative">
               <button 
                 className="text-charcoal hover:text-sky font-medium transition-colors flex items-center"
-                onMouseEnter={() => setActiveDropdown('about')}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseEnter={() => showDropdown('about')}
+                onMouseLeave={() => hideDropdown('about')}
               >
                 About
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +93,11 @@ export function Nav() {
               </button>
               
               {activeDropdown === 'about' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-sand py-2 z-50">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-sand py-2 z-50"
+                  onMouseEnter={() => handleDropdownMouseEnter('about')}
+                  onMouseLeave={() => handleDropdownMouseLeave('about')}
+                >
                   <Link href="/about" className="block px-4 py-2 text-charcoal hover:bg-sand transition-colors">
                     Mission, Values, Vision
                   </Link>
@@ -71,11 +115,11 @@ export function Nav() {
             </div>
 
             {/* Impact Dropdown */}
-            <div className="relative group">
+            <div className="relative">
               <button 
                 className="text-charcoal hover:text-sky font-medium transition-colors flex items-center"
-                onMouseEnter={() => setActiveDropdown('impact')}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseEnter={() => showDropdown('impact')}
+                onMouseLeave={() => hideDropdown('impact')}
               >
                 Impact
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +128,11 @@ export function Nav() {
               </button>
               
               {activeDropdown === 'impact' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-sand py-2 z-50">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-sand py-2 z-50"
+                  onMouseEnter={() => handleDropdownMouseEnter('impact')}
+                  onMouseLeave={() => handleDropdownMouseLeave('impact')}
+                >
                   <Link href="/programs" className="block px-4 py-2 text-charcoal hover:bg-sand transition-colors">
                     Programs
                   </Link>
