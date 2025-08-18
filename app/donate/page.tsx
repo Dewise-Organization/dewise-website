@@ -119,7 +119,7 @@ export default function DonatePage() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-sand p-8 rounded-lg border-2 border-gold">
+        <div className="mt-16 text-center bg-sand p-8 rounded-lg border-2 border-gold">
           <h3 className="text-xl font-semibold text-charcoal mb-3">Ready to Make a Difference?</h3>
           <p className="text-charcoal mb-6">
             Every donation, no matter the size, helps us empower communities across Cameroon.
@@ -128,9 +128,9 @@ export default function DonatePage() {
             <button className="btn-primary">
               Donate Now
             </button>
-            <Link href="/contact" className="btn-secondary">
+            <a href="mailto:infodewise@gmail.com?subject=Contact Dewise Foundation" className="btn-secondary">
               Contact Us
-            </Link>
+            </a>
           </div>
         </div>
       </section>

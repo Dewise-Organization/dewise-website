@@ -183,10 +183,10 @@ export default function ContactPage() {
             Whether you want to volunteer, partner with us, or support our mission, we'd love to hear from you.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/donate" className="btn-primary">
+            <a href="mailto:infodewise@gmail.com?subject=Support Dewise Foundation Mission" className="btn-primary">
               Support Our Mission
             </a>
-            <a href="/about" className="btn-secondary">
+            <a href="mailto:infodewise@gmail.com?subject=Learn More About Dewise Foundation" className="btn-secondary">
               Learn More About Us
             </a>
           </div>

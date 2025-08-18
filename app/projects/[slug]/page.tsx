@@ -170,12 +170,12 @@ export default function ProjectDetailPage({ params }: Props) {
             Help us expand {project.title} to reach more communities and create greater impact.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/donate" className="btn-primary">
+            <a href="mailto:infodewise@gmail.com?subject=Support Dewise Foundation Project" className="btn-primary">
               Donate Now
-            </Link>
-            <Link href="/contact" className="btn-secondary">
+            </a>
+            <a href="mailto:infodewise@gmail.com?subject=Get Involved with Dewise Foundation" className="btn-secondary">
               Get Involved
-            </Link>
+            </a>
           </div>
         </div>
 

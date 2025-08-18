@@ -111,13 +111,22 @@ export default function FoundersPage() {
             Inspired by our founders' vision? Join us in creating sustainable change across Cameroon.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/donate" className="btn-primary">
+            <a 
+              href="mailto:infodewise@gmail.com?subject=Support Dewise Foundation Work"
+              className="btn-primary"
+            >
               Support Our Work
             </a>
-            <a href="/contact" className="btn-secondary">
+            <a 
+              href="mailto:infodewise@gmail.com?subject=Get in Touch with Dewise Foundation"
+              className="btn-secondary"
+            >
               Get in Touch
             </a>
-            <a href="/team" className="btn-secondary">
+            <a 
+              href="mailto:infodewise@gmail.com?subject=Meet Dewise Foundation Team"
+              className="btn-secondary"
+            >
               Meet Our Team
             </a>
           </div>

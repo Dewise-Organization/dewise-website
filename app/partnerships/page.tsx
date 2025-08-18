@@ -176,7 +176,7 @@ export default function PartnershipsPage() {
             Let's explore how we can work together to create sustainable change across Cameroon.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/contact" className="btn-primary">
+            <a href="mailto:infodewise@gmail.com?subject=Partnership Inquiry" className="btn-primary">
               Get in Touch
             </a>
             <a href="mailto:infodewise@gmail.com?subject=Partnership Inquiry" className="btn-secondary">

@@ -124,13 +124,13 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="/founders"
+              href="mailto:infodewise@gmail.com?subject=Meet Dewise Foundation Founders"
               className="btn-primary"
             >
               Meet Our Founders
             </a>
             <a
-              href="/team"
+              href="mailto:infodewise@gmail.com?subject=View Dewise Foundation Team"
               className="btn-secondary"
             >
               View Full Team

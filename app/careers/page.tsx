@@ -183,7 +183,7 @@ export default function CareersPage() {
                 >
                   Send Your CV
                 </a>
-                <a href="/contact" className="btn-secondary">
+                <a href="mailto:infodewise@gmail.com?subject=Contact Dewise Foundation" className="btn-secondary">
                   Contact Us
                 </a>
               </div>
@@ -193,19 +193,28 @@ export default function CareersPage() {
 
         {/* Call to Action */}
         <div className="text-center bg-sand p-8 rounded-lg border-2 border-gold">
-          <h3 className="text-xl font-semibold text-charcoal mb-3">Ready to Make a Difference?</h3>
+          <h3 className="text-xl font-semibold text-charcoal mb-3">Join Our Mission</h3>
           <p className="text-charcoal mb-6">
-            Join our team and help us empower communities across Cameroon through sustainable solutions.
+            Inspired by our founders' vision? Join us in creating sustainable change across Cameroon.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="mailto:infodewise@gmail.com?subject=Career Inquiry"
+              href="mailto:infodewise@gmail.com?subject=Support Dewise Foundation Work"
               className="btn-primary"
             >
-              Get Started
+              Support Our Work
             </a>
-            <a href="/about" className="btn-secondary">
-              Learn More About Us
+            <a 
+              href="mailto:infodewise@gmail.com?subject=Get in Touch with Dewise Foundation"
+              className="btn-secondary"
+            >
+              Get in Touch
+            </a>
+            <a 
+              href="mailto:infodewise@gmail.com?subject=Meet Dewise Foundation Team"
+              className="btn-secondary"
+            >
+              Meet Our Team
             </a>
           </div>
         </div>

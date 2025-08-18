@@ -57,7 +57,7 @@ export default function HomePage() {
                   <ImageWithFallback 
                     src={image.src} 
                     alt={image.alt} 
-                    fallback="🌱"
+                    fallback=""
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
                   <div className="p-4">
@@ -77,7 +77,7 @@ export default function HomePage() {
                   <ImageWithFallback 
                     src={image.src} 
                     alt={image.alt} 
-                    fallback="🌟"
+                    fallback=""
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
                   <div className="p-4">
@@ -102,7 +102,7 @@ export default function HomePage() {
             {site.hero.recognition.highlights.map((highlight, index) => (
               <div key={index} className="card-accent">
                 <div className="text-center">
-                  <div className="text-3xl mb-3">🏆</div>
+                  <div className="text-3xl mb-3 text-gold">Award</div>
                   <h3 className="font-semibold text-charcoal text-sm leading-tight">{highlight}</h3>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {site.focusAreas.map((area) => (
               <Link key={area.slug} href={area.href} className="card group hover:border-sky transition-all duration-200">
-                <div className="text-3xl mb-3 text-forest">{area.icon}</div>
+                <div className="text-3xl mb-3 text-forest">{area.title}</div>
                 <div className="text-sm uppercase text-sky font-medium">{area.kicker}</div>
                 <div className="mt-1 text-lg font-semibold text-charcoal group-hover:text-sky">{area.title}</div>
                 <p className="mt-2 text-charcoal">{area.desc}</p>
@@ -143,7 +143,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {site.projects.map((p) => (
               <Link key={p.slug} href={`/projects/${p.slug}`} className="card group">
-                <div className="text-3xl mb-3 text-forest">{p.icon}</div>
+                <div className="text-3xl mb-3 text-forest">{p.title}</div>
                 <div className="text-sm uppercase text-forest font-medium">{p.kicker}</div>
                 <div className="mt-1 text-lg font-semibold text-charcoal">{p.title}</div>
                 <p className="mt-2 text-charcoal">{p.summary}</p>
@@ -182,7 +182,7 @@ export default function HomePage() {
                   <ImageWithFallback 
                     src={partner.logo} 
                     alt={partner.name} 
-                    fallback="🏢"
+                    fallback=""
                     className="w-16 h-16 object-contain"
                   />
                 </a>

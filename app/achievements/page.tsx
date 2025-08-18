@@ -248,13 +248,13 @@ export default function AchievementsPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/donate" 
+              href="mailto:infodewise@gmail.com?subject=Support Dewise Foundation Mission" 
               className="btn-primary"
             >
               Support Our Mission
             </a>
             <a 
-              href="/contact" 
+              href="mailto:infodewise@gmail.com?subject=Get Involved with Dewise Foundation" 
               className="btn-secondary"
             >
               Get Involved
