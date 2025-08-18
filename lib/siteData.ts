@@ -406,8 +406,8 @@ export const site = {
   ],
   socials: [
     { label: 'Facebook', href: 'https://facebook.com/dewisefoundation' },
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/infodewise' },
-    { label: 'Instagram', href: 'https://instagram.com/dewisefoundation' }
+    { label: 'LinkedIn', href: 'https://cm.linkedin.com/company/infodewise' },
+    { label: 'Instagram', href: 'https://www.instagram.com/dewise_foundation/' }
   ],
   timeline: [
     {
